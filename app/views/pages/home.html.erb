@@ -1,35 +1,33 @@
 <div class="container">
 
   <div id='about_section'>
-    <div class="presentation">
+    <div class="center-section">
       <div class="main-presentation">
-        <div>
+        <div class="left-presentation">
           <h2>Hello</h2>
           <h3>C'est Pierre Libran</h3>
           <div class="paragraph">
             <p>Je suis un développeur full-stack spécialisé en Ruby on Rails. J'ai suivi la formation "Concepteur Développeur d'Applications Web" chez Le Wagon Lyon, où j'ai pu transformer ma passion en compétences concrètes.</p>
           </div>
-          <div>
-            <ul>
-              <li>Ruby on Rails</li>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
+          <ul>
+            <li>Ruby on Rails</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+          </ul>
         </div>
-        <div>
-          <%= image_tag "profile.jpg", alt: "Photo", class: "" %>
+        <div class="right-presentation">
+          <%= image_tag "profile.jpg", alt: "Photo", class: "photo" %>
         </div>
       </div>
       <div class="secondary-presentation">
-        <div>
-          <%= image_tag "profile.jpg", alt: "Photo", class: "" %>
+        <div class="top-secondary-presentation">
+          <%= image_tag "profile.jpg", alt: "Photo", class: "avatar" %>
           <p>Je suis une personne calme, rigoureuse, et attentive aux détails. Ce qui me fascine dans le développement web, c'est la possibilité de créer des solutions innovantes et de donner vie à des idées à travers le code. J'aime le fait de pouvoir résoudre des problèmes complexes, construire des applications utiles, et voir directement l'impact de mon travail.</p>
         </div>
         <div>
-          <div>
-            <%= link_to 'VOIR MES PROJETS', '#projects_section' %>
+          <div class="bottom-secondary-presentation">
+            <%= link_to "VOIR MES PROJETS",'#projects_section' %>
           </div>
         </div>
       </div>
@@ -37,27 +35,31 @@
   </div>
 
   <div id="contact_section">
-    <div>
-      <p>Merci d'avoir pris le temps de parcourir mon site jusqu'à la fin.</p>
-      <p>Si vous recherchez un talent responsable et motivé à évoluer au sein de votre entreprise, je suis prêt à relever le défi.</p>
-    </div>
-    <div>
-      <h2>Let's have a chat</h2>
-      <div class="form">
-        <%= simple_form_for :contact, url: contacts_path, method: :post do |f| %>
-            <div class="form-group">
-              <%= f.input :name, label: "Nom", required: true %>
+    <div class="center-section">
+      <div class="top-contact">
+        <p>Merci d'avoir pris le temps de parcourir mon site jusqu'à la fin.</p>
+        <p>Si vous recherchez un talent responsable et motivé à évoluer au sein de votre entreprise, je suis prêt à relever le défi.</p>
+      </div>
+      <div class="bottom-contact">
+        <h2>Let's have a chat :)</h2>
+        <div class="form">
+          <%= simple_form_for :contact, url: contacts_path, method: :post do |f| %>
+            <div class="form-group-one">
+              <div class="form-group">
+                <%= f.input :name, label: "", placeholder: "Votre nom et prénom", required: true %>
+              </div>
+              <div class="form-group">
+                <%= f.input :email, label: "", placeholder: "Votre adresse mail", required: true %>
+              </div>
             </div>
             <div class="form-group">
-              <%= f.input :email, label: "Email", required: true %>
+              <%= f.input :message, as: :text, label: "", placeholder: "Message", required: true %>
             </div>
-          <div class="form-group">
-            <%= f.input :message, as: :text, label: "Message", placeholder: "Écrivez votre message ici...", required: true %>
-          </div>
-          <div class="form-group-btn">
-            <%= f.button :submit, "Envoyer", class: "btn" %>
-          </div>
-        <% end %>
+            <div class="form-group-btn">
+              <%= f.button :submit, "Envoyer", class: "btn" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
     </div>

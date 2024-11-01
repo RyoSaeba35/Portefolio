@@ -1,0 +1,19 @@
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+  align-content: center;
+}
+
+body, html {
+  overflow-x: hidden; /* To prevent horizontal scrolling */
+  // overflow-y: auto; /* Ensure vertical scrolling is enabled */
+}

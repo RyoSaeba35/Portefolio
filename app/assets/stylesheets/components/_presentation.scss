@@ -1,0 +1,45 @@
+#about_section {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 24px 0px 24px 0px;
+}
+
+.center-section {
+  background: whitesmoke;
+  max-width:1064px;
+}
+
+.main-presentation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-presentation ul {
+  display: flex;
+
+}
+
+.left-presentation li {
+  padding-right: 20px;
+}
+
+.secondary-presentation {
+  margin: 48px 0px 24px 0px;
+  .bottom-secondary-presentation {
+    display: flex;
+    justify-content: end;
+    a{
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+
+.top-secondary-presentation {
+  display: flex;
+  vertical-align: middle;
+  p {
+    margin-left: 32px;
+  }
+}

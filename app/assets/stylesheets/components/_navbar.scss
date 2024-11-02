@@ -16,12 +16,16 @@
   height: 40px;
 }
 
-.contact-btn {
+.white-btn {
   background: white;
-  border: 1px solid black;
+  // border: 1px solid black;
   border-radius: 4px;
-  padding: 2px 4px;
+  padding: 2px 12px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.large-btn {
+  padding: 2px 20px;
 }
 
 .section {

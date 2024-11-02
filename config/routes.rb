@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root "pages#home"
   resources :contacts, only: [ :create ]
+  get '/download_cv', to: 'documents#download_cv'
+
 end

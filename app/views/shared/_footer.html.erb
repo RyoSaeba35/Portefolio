@@ -2,8 +2,8 @@
   <div class="footer">
     <li><%= link_to 'Qui suis-je ?', '#about_section' %></li>
     <li><%= link_to 'Projets', '#projects_section' %></li>
-    <li><%= link_to 'Mon CV', '#presentation_section' %></li>
-    <li>Téléphone : 0611443706</li>
-    <li>E-mail : pierre_libran@gmail.com</li>
+    <li><%= link_to 'Mon CV',  download_cv_path, target: "_blank" %></li>
+    <li class="d-flex"><%= 'Téléphone :' %>&nbsp; <%= link_to '0611443706', 'tel:0611443706' %></li>
+    <li class="d-flex"><%= 'E-mail :' %>&nbsp; <%= mail_to 'pierre_libran@gmail.com', 'pierre_libran@gmail.com', subject: 'Prise de contact suite à la vue du portefolio' %></li>
   </div>
 </div>

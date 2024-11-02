@@ -23,6 +23,7 @@
   border-radius: 8px;
   height: 120px;
   width: 100%;
+  padding: 8px;
 }
 
 .form-group textarea:focus {
@@ -39,11 +40,15 @@
   };
   .form-group input {
     width: 100%;
+    padding: 8px;
   }
 }
 
 .form-group-btn {
+  display: flex;
+  justify-content: end;
   .btn {
-    justify-content: end;
+    border: 1px solid grey;
+    border-radius: 8px;
   }
 }

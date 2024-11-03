@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Portefolio" %></title>
+    <title><%= content_for(:title) || "Portefolio Pierre Libran" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+
     <%= yield :head %>
 
     <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/icon.png" type="image/png">
-    <link rel="icon" href="/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/icon.png">
+    <%# <link rel="icon" href="/icon.png" type="image/png"> %>
+    <%# <link rel="icon" href="/icon.svg" type="image/svg+xml"> %>
+    <%# <link rel="apple-touch-icon" href="/icon.png"> %>
+    <link rel="icon" type="image/png" href="profile.png" sizes="32x32">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -21,5 +23,29 @@
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
+
+    <!-- In your view file (e.g., app/views/your_view.html.erb) -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const links = document.querySelectorAll(".scroll-link");
+
+        links.forEach(link => {
+          link.addEventListener("click", function(event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection) {
+              window.scrollTo({
+                top: targetSection.offsetTop,
+                behavior: "smooth"
+              });
+            }
+          });
+        });
+      });
+    </script>
+
   </body>
 </html>

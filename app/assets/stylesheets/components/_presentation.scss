@@ -2,17 +2,30 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  margin: 24px 0px 24px 0px;
+  padding: 24px 0px;
+  height: 100vh;
 }
 
 .center-section {
-  background: whitesmoke;
   max-width:1064px;
 }
 
 .main-presentation {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two rows of equal height */
   justify-content: space-between;
+}
+
+// .left-presentation {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.right-presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .left-presentation ul {

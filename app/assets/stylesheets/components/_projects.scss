@@ -19,10 +19,48 @@
   flex-direction: column;    /* Stack the <p> and <ul> vertically */
   align-items: center;       /* Center horizontally */
   text-align: center;
+  margin: 0px 16px;
   ul {
-    gap: 8px;
+    gap: 32px;
   }
 }
+
+.progress-bar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  width: 100%;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.grey-frame {
+  background: #D2D2D2;
+  border-radius: 8px;
+  color: white;
+
+  padding: 4px 0px;
+}
+
+.outer-circle {
+  width: 12px;
+  height: 12px;
+  background-color: grey; /* Outer circle color */
+  border-radius: 50%;     /* Makes it a circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-circle {
+  width: 6px;
+  height: 6px;
+  background-color: white; /* Inner circle color */
+  border-radius: 50%;      /* Makes it a circle */
+}
+
 
 // .d-flex {
 //   display: flex;

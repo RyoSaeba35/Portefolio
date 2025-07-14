@@ -1,28 +1,51 @@
-#projet_2 {
-  margin: 64px 0px;
+#projects_section {
+  background: #F1F1F1;
+}
+
+#projects_section .top-project {
+  display: grid;
+  grid-template-columns: 50% 50%; /* Two rows of equal height */
+  justify-content: space-between;
+}
+
+#projects_section .top-project .right-presentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .top-project {
-  margin: 16px 0px;
+  h5 {
+    font-family: Montserrat;
+    font-weight: 600;
+    font-style: SemiBold;
+    font-size: 24px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    margin: 20px 0px;
+  }
 }
 
 .middle-project {
-  h4 {
-    margin: 16px 0px;
-  }
-  margin-bottom: 16px;
-}
-
-.bottom-project {
-  margin: 16px 0px;
+  margin: 24px 0px;
   display: flex;
   flex-direction: column;    /* Stack the <p> and <ul> vertically */
   align-items: center;       /* Center horizontally */
   text-align: center;
-  margin: 0px 16px;
   ul {
     gap: 8px 32px;
   }
+}
+
+.middle-project p {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  text-align: center;
+  margin: 20px;
 }
 
 .progress-bar {
@@ -37,11 +60,21 @@
 }
 
 .grey-frame {
-  background: #D2D2D2;
   border-radius: 8px;
   color: white;
-
   padding: 4px 0px;
+}
+
+#project_1 .grey-frame {
+  background: #0E98A9;
+}
+
+#project_2 .grey-frame {
+  background: #F98707;
+}
+
+#project_3 .grey-frame {
+  background: #3B9F22;
 }
 
 .outer-circle {
@@ -61,36 +94,61 @@
   border-radius: 50%;      /* Makes it a circle */
 }
 
+.c-item h4 {
+  display: flex;
+  gap: 24px;
+  span {
+    margin-top: auto;
+  }
+}
 
-// .d-flex {
-//   display: flex;
-//   align-items: center; /* Aligns items vertically centered */
-//   gap: 10px;           /* Adds some space between the circle and the h4 */
-// }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 25px;
+}
 
-// .circle-container {
-//   position: relative;
-//   width: auto;           /* Adjust width to control overall size */
-//   height: auto;          /* Adjust height to control overall size */
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
 
-// .circle {
-//   width: 10px;            /* Size of the inner circle */
-//   height: 10px;
-//   background-color: grey; /* Circle color */
-//   border-radius: 50%;     /* Makes it a circle */
-//   position: absolute;
-//   z-index: 2;
-// }
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #FFFFFF;
+  transition: .4s;
+}
 
-// .ellipse {
-//   width: 30px;            /* Width of the ellipse */
-//   height: 20px;           /* Height of the ellipse */
-//   box-shadow: 0 1px 2px rgba(0,0,0,0.2); /* Border color for ellipse */
-//   border-radius: 25%;     /* Makes it an ellipse */
-//   position: absolute;
-//   z-index: 1;
-// }
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 4px;
+  background: #707070;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

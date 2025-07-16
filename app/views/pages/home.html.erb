@@ -14,7 +14,7 @@
             <li>HTML</li>
             <li>CSS</li>
             <li>JavaScript</li>
-            <li>PostgreSL</li>
+            <li>PostgreSQL</li>
             <li>Java</li>
             <li>ActiveRecord</li>
           </ul>
@@ -52,7 +52,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet1.1.png", alt: "Photo", class: "image" %>
+                  <%= image_tag "Projet1.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet1.1.png')}')" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -121,7 +121,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet2.1.png", alt: "Photo", class: "image" %>
+                  <%= image_tag "Projet2.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet2.1.png')}')" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -195,7 +195,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image" %>
+                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -204,7 +204,7 @@
                         <input type="checkbox">
                         <span class="slider round"></span>
                       </label>
-                      <strong>SITE WEB - The Little Firefly</strong>
+                      <strong>SITE WEB - <a href="https://www.thelittlefirefly.co.uk/en" target="_blank">The Little Firefly</a></strong>
                     </h5>
                     <%# <%= link_to "https://github.com/RyoSaeba35/Portefolio", target: "_blank" do %>
                       <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
@@ -212,7 +212,7 @@
                   </div>
                   <div>
                     <p>The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales.</p><br>
-                    <p>Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong></p>
+                    <p>Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong></p><br>
                   </div>
                 </div>
               </div>
@@ -291,6 +291,8 @@
   </div>
 </div>
 
+<%= render 'shared/modal' %>
+
 <style>
   .project-link {
     cursor: pointer;
@@ -302,7 +304,6 @@
     letter-spacing: 0%;
     text-align: center;
     vertical-align: middle;
-
   }
 
   .c-inner {
@@ -313,7 +314,7 @@
   }
 
   .c-item {
-    height: 100vh;
+    /* height: 100vh; */
     padding: 20px;
     background: #F1F1F1; /* Example background color */
     flex: 0 0 auto;
@@ -350,4 +351,17 @@
   document.addEventListener('DOMContentLoaded', function() {
     showProject(1);
   });
+
+  function openModal(imgSrc) {
+    var modal = document.getElementById("myModal");
+    var modalImg = document.getElementById("img01");
+
+    modal.style.display = "block";
+    modalImg.src = imgSrc;
+  }
+
+  function closeModal() {
+    var modal = document.getElementById("myModal");
+    modal.style.display = "none";
+  }
 </script>

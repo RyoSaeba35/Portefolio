@@ -65,16 +65,42 @@
   padding: 4px 0px;
 }
 
-#project_1 .grey-frame {
-  background: #0E98A9;
+#project_1 {
+  .grey-frame {
+    background: #0E98A9;
+  }
+  .project-link:hover {
+    color: #0E98A9;
+    font-weight: bold;
+  }
 }
 
-#project_2 .grey-frame {
-  background: #F98707;
+
+#project_2 {
+  .grey-frame {
+    background: #F98707;
+  }
+  .project-link:hover {
+    color: #F98707;
+    font-weight: bold;
+  }
 }
 
-#project_3 .grey-frame {
-  background: #3B9F22;
+#project_3 {
+  .grey-frame {
+    background: #3B9F22;
+  }
+  a {
+    color : #3B9F22 ;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #d35400;
+  }
+  .project-link:hover {
+    color: #3B9F22;
+    font-weight: bold;
+  }
 }
 
 .outer-circle {
@@ -129,21 +155,21 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 12px;
-  width: 12px;
-  left: 4px;
-  bottom: 4px;
+  height: 11px;
+  width: 11px;
+  left: 7px;
+  bottom: 7px;
   background: #707070;
   transition: .4s;
 }
 
-input:checked + .slider {
-  background-color: #2196F3;
-}
+// input:checked + .slider {
+//   background-color: #2196F3;
+// }
 
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
+// input:checked + .slider:before {
+//   transform: translateX(26px);
+// }
 
 .slider.round {
   border-radius: 34px;

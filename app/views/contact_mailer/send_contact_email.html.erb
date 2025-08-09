@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  <title>Contact Information</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+    .contact-info {
+      background-color: #f4f4f4;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .contact-info p {
+      margin: 10px 0;
+    }
+    .message {
+      margin-top: 20px;
+      padding: 20px;
+      border-left: 4px solid #007BFF;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="contact-info">
+    <p><strong>Name:</strong> <%= @contact.name %></p>
+    <p><strong>Email:</strong> <%= @contact.email %></p>
+  </div>
+  <div class="message">
+    <p><strong>Message:</strong></p>
+    <p>"<%= @contact.message %>"</p>
+  </div>
+</body>
+</html>

@@ -2,11 +2,11 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Portefolio Pierre Libran" %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
 
     <%= yield :head %>
 
@@ -15,6 +15,7 @@
     <%# <link rel="icon" href="/icon.svg" type="image/svg+xml"> %>
     <%# <link rel="apple-touch-icon" href="/icon.png"> %>
     <link rel="icon" type="image/png" href="profile.png" sizes="32x32">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
@@ -23,7 +24,20 @@
     <%= render 'shared/navbar' %>
     <%= yield %>
     <%= render 'shared/footer' %>
-
+    <%= render 'shared/mini_navbar' %>
+    <style>
+      @media (min-width: 842px) {
+        .mini-navbar-container {
+          display: none;
+        }
+      }
+      @media (max-width: 842px) {
+        .navbar-container,
+        .footer-container {
+          display: none !important;
+        }
+      }
+    </style>
     <!-- In your view file (e.g., app/views/your_view.html.erb) -->
     <script>
       document.addEventListener("DOMContentLoaded", function() {
@@ -45,7 +59,83 @@
           });
         });
       });
-    </script>
 
+      function showProject(projectNumber) {
+        console.log(`Showing project ${projectNumber}`);
+        document.querySelectorAll('.c-item').forEach(item => {
+          item.style.display = 'none';
+        });
+        const selectedProject = document.getElementById(`project_${projectNumber}`);
+        if (selectedProject) {
+          selectedProject.style.display = 'block';
+        }
+      }
+      function openModal(imgSrc) {
+        console.log(`Opening modal with ${imgSrc}`);
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        modal.style.display = "block";
+        modalImg.src = imgSrc;
+        document.documentElement.style.overflow = "hidden";
+      }
+      function closeModal() {
+        console.log("Closing modal");
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+        document.documentElement.style.overflow = "auto";
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log("DOM loaded, showing project 1");
+        showProject(1);
+      });
+
+      // change the route following if it s a wider screen
+      document.addEventListener("DOMContentLoaded", function() {
+        const isMobile = window.innerWidth <= 842;
+        const currentPath = window.location.pathname;
+
+        if (isMobile && !currentPath.startsWith('/mobile')) {
+          window.location.href = '<%= mobile_home_path %>';
+        }
+      });
+
+      window.addEventListener('resize', function() {
+        const isMobile = window.innerWidth <= 842;
+        const currentPath = window.location.pathname;
+
+        if (isMobile && !currentPath.startsWith('/mobile')) {
+          window.location.href = '<%= mobile_home_path %>';
+        }
+      });
+
+      function checkScreenSize() {
+        const isLargeScreen = window.innerWidth > 842;
+        const isMobilePath = window.location.pathname.startsWith('/mobile');
+
+        if (isLargeScreen && isMobilePath) {
+          window.location.href = '<%= root_path %>';
+        }
+      }
+
+      // Check screen size when the page loads
+      document.addEventListener("DOMContentLoaded", checkScreenSize);
+
+      // Check screen size when the window is resized
+      window.addEventListener('resize', checkScreenSize);
+
+      // Toggle functionality
+      document.querySelectorAll('.toggle-trigger').forEach(trigger => {
+        trigger.addEventListener('click', function() {
+          const target = this.nextElementSibling;
+          if (target.classList.contains('toggle-target')) {
+            if (target.style.display === 'none' || target.style.display === '') {
+              target.style.display = 'block'; // Show the target
+            } else {
+              target.style.display = 'none'; // Hide the target
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>

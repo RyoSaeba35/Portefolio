@@ -10,7 +10,10 @@ Rails.application.routes.draw do
   #get "manifest" => "rails/pwa#manifest", as: :pwa_manifest
 
   # Defines the root path route ("/")
-  root "pages#home"
+  root "pages#home" # Default root route
+  get 'mobile', to: 'pages#mobile_home', as: 'mobile_home'
+  get 'mobile/contact', to: 'pages#mobile_contact', as: 'mobile_contact'
+  get 'mobile/projects', to: 'pages#mobile_project', as: 'mobile_project'
   resources :contacts, only: [ :create ]
   get '/download_cv', to: 'documents#download_cv'
 

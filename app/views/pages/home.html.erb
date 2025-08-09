@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="content-wrapper">
 
   <div id='about_section'>
     <div class="center-section">
@@ -20,12 +20,12 @@
           </ul>
         </div>
         <div class="right-presentation">
-          <%= image_tag "portfolio_pierre_profile.jpg", alt: "Photo", class: "photo" %>
+          <%= image_tag "portfolio_pierre_desk_II.jpg", alt: "Photo", class: "photo" %>
         </div>
       </div>
       <div class="secondary-presentation">
         <div class="top-secondary-presentation">
-          <%= image_tag "portfolio_pierre_desk.jpg", alt: "Photo", class: "avatar" %>
+          <%= image_tag "portfolio_pierre_profile.jpg", alt: "Avatar", class: "avatar" %>
           <p>Je suis une personne calme, rigoureuse, et attentive aux détails. Ce qui me fascine dans le développement web, c'est la possibilité de <strong>créer des solutions innovantes</strong> et de <strong>donner vie à des idées à travers le code</strong>. J'aime le fait de pouvoir résoudre des problèmes complexes, construire des applications utiles, et voir directement l'impact de mon travail.</p>
         </div>
         <div>
@@ -268,100 +268,11 @@
       </div>
       <div class="bottom-contact">
         <h6>Let's have a chat :)</h6>
-        <div class="form">
-          <%= simple_form_for :contact, url: contacts_path, method: :post do |f| %>
-            <div class="form-group-one">
-              <div class="form-group">
-                <%= f.input :name, label: "", placeholder: "Votre nom et prénom", required: true %>
-              </div>
-              <div class="form-group">
-                <%= f.input :email, label: "", placeholder: "Votre adresse mail", required: true %>
-              </div>
-            </div>
-            <div class="form-group">
-              <%= f.input :message, as: :text, label: "", placeholder: "Message", required: true %>
-            </div>
-            <div class="form-group-btn">
-              <%= f.button :submit, "Envoyer", class: "btn" %>
-            </div>
-          <% end %>
-        </div>
+        <%= render 'shared/contact_form' %>
       </div>
     </div>
   </div>
+  
 </div>
 
 <%= render 'shared/modal' %>
-
-<style>
-  .project-link {
-    cursor: pointer;
-    font-family: Montserrat;
-    font-weight: 400;
-    font-style: Regular;
-    font-size: 24px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    text-align: center;
-    vertical-align: middle;
-  }
-
-  .c-inner {
-    display: flex;
-    overflow-x: hidden; /* Hide horizontal scrollbar */
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
-  }
-
-  .c-item {
-    /* height: 100vh; */
-    padding: 20px;
-    background: #F1F1F1; /* Example background color */
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    width: 100%; /* Adjust width as needed */
-  }
-
-  .c-item h4 strong{
-    font-family: Montserrat;
-    font-weight: 700;
-    font-style: Bold;
-    font-size: 36px;
-
-    line-height: 100%;
-    letter-spacing: 0%;
-  }
-</style>
-
-<script>
-  function showProject(projectNumber) {
-    // Hide all projects
-    document.querySelectorAll('.c-item').forEach(item => {
-      item.style.display = 'none';
-    });
-
-    // Show the selected project
-    const selectedProject = document.getElementById(`project_${projectNumber}`);
-    if (selectedProject) {
-      selectedProject.style.display = 'block';
-    }
-  }
-
-  // Ensure the first project is shown by default
-  document.addEventListener('DOMContentLoaded', function() {
-    showProject(1);
-  });
-
-  function openModal(imgSrc) {
-    var modal = document.getElementById("myModal");
-    var modalImg = document.getElementById("img01");
-
-    modal.style.display = "block";
-    modalImg.src = imgSrc;
-  }
-
-  function closeModal() {
-    var modal = document.getElementById("myModal");
-    modal.style.display = "none";
-  }
-</script>

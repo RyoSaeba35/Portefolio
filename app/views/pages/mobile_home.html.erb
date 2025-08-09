@@ -1,0 +1,144 @@
+<div id='about_section'>
+  <div class="center-section">
+      <div class="left-presentation">
+        <h2>Hello</h2>
+        <h3>C'est Pierre Libran</h3>
+        <div class="paragraph">
+          <p>Je suis un <strong>développeur full-stack</strong> spécialisé en <strong>Ruby on Rails</strong>.</p>
+        </div>
+      </div>
+      <div class="right-presentation">
+        <%= image_tag "portfolio_pierre_desk_II.jpg", alt: "Photo", class: "photo" %>
+      </div>
+      <ul>
+        <li>Ruby on Rails</li>
+        <li>ActiveRecord</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>PostgreSQL</li>
+        <li>Java</li>
+      </ul>
+
+    <div class="secondary-presentation">
+        <div class="bottom-secondary-presentation">
+          <%= link_to '<i class="fa-solid fa-down-long"></i> VOIR MES PROJETS'.html_safe, mobile_project_path %>
+        </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 842px) {
+    #about_section {
+      display: flex;
+      justify-content: center;
+      /* align-items: center; */
+      width: 80%;
+      min-height: calc(100vh - 88px);
+      margin: auto;
+      padding: 0px;
+      margin-top: 44px;
+      background: #F1F1F1;
+    }
+
+    #about_section .left-presentation {
+      display: flex;
+      flex-wrap: wrap;
+      align-content: end;
+      gap: 20px;
+    }
+
+    #about_section .right-presentation {
+      display: flex;
+      align-items: center;
+      justify-content: right;
+      margin: 20px 0px;
+    }
+
+    .left-presentation h2 {
+      font-family: Montserrat;
+      font-weight: 500;
+      font-style: Medium;
+      font-size: 64px;
+      line-height: 100%;
+      letter-spacing: 0%;
+      margin-top: 24px;
+    }
+
+    .left-presentation h3 {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 32px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+
+    .left-presentation .paragraph p {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      vertical-align: middle;
+    }
+
+    .center-section ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 92;
+      height: 52;
+      top: 459px;
+      left: 366px;
+      border-width: 1px;
+      opacity: 1;
+      border-radius: 1000px;
+      padding-top: 2px;
+      padding-right: 13px;
+      padding-bottom: 2px;
+      /* // padding-left: 13px; */
+      gap: 10px;
+      justify-content: center; /* Center items horizontally */
+    }
+
+    .center-section li {
+      padding: 8px 26px;
+      border-radius: 48px;
+      background: #EDEDED;
+      font-family: Montserrat;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: 3%;
+      text-align: center;
+      vertical-align: middle;
+      border: 1px solid #D9D9D9;
+    }
+
+    .secondary-presentation {
+      margin: auto;
+      .bottom-secondary-presentation {
+        display: flex;
+        justify-content: end;
+        a{
+          text-decoration: none;
+          color: black;
+          font-family: Montserrat;
+          font-weight: 400;
+          font-style: Regular;
+          font-size: 14px;
+          line-height: 26px;
+          letter-spacing: 9%;
+          text-align: center;
+          vertical-align: middle;
+          text-transform: uppercase;
+          width: 255px;
+          height: 35px;
+        }
+      }
+    }
+  }
+</style>

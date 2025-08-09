@@ -20,3 +20,45 @@ body{
 html {
   scroll-behavior: smooth;
 }
+
+.project-link {
+  cursor: pointer;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: Regular;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.c-inner {
+  display: flex;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+}
+
+.c-item {
+  /* height: 100vh; */
+  padding: 20px;
+  background: #F1F1F1; /* Example background color */
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  width: 100%; /* Adjust width as needed */
+}
+
+.c-item h4 strong{
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 36px;
+
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+/* html.no-scroll {
+  overflow: hidden;
+} */

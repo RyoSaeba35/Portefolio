@@ -1,0 +1,485 @@
+<div id="projects_section">
+  <div class="center-section">
+      <div class="c-inner">
+        <div id="project_1" class="c-item"  style="display: block;">
+          <div>
+            <div>
+              <h4>
+                <strong>Projet</strong>
+                <strong>1</strong>
+                <span class="project-link" onclick="showProject(2)">2</span>
+                <span class="project-link" onclick="showProject(3)">3</span>
+              </h4>
+            </div>
+            <div class="top-project">
+              <div class="d-flex">
+                <h5>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <strong>FLASHCARD WARS</strong>
+                  </h5>
+              </div>
+              <div>
+                <%= image_tag "Projet1.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet1.1.png')}')" %>
+              </div>
+              <div>
+              <div>
+                <p>Flash Card Wars est <strong>une application ludique</strong> créée pour les étudiants du Wagon afin de mémoriser les leçons via des flashcards interactives et des défis entre camarades.</p><br>
+                <p>J’ai travaillé sur le <strong>back-end en Ruby on Rails</strong> et <strong>l’intégration front-end,</strong> ainsi que sur <strong>la logique de jeu.</strong></p>
+              </div>
+              </div>
+            </div>
+            <div class="middle-project">
+                <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+                <ul class="progress-bar toggle-target">
+                  <li class="progress-item">
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                    <div class="grey-frame">Recherche</div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                    <div class="grey-frame">Wireframing</div>
+                  </li>
+                  <li class="progress-item">
+                    <div style="width:12px;">
+                      <div></div>
+                    </div>
+                    <div class="grey-frame">Design</div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                    <div class="grey-frame">Development</div>
+                  </li>
+                  <li class="progress-item">
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                    <div class="grey-frame">Testing</div>
+                  </li>
+                </ul>
+                <p class="toggle-trigger">> En savoir plus?</p>
+                <%= image_tag "Projet1.2.png", alt: "Photo", class: "image0 toggle-target" %>
+                <p class="toggle-trigger">> Lire les codes?</p>
+                <%= link_to "https://github.com/RyoSaeba35/Flashcards-Wars-version-originale", target: "_blank", class:"hidden toggle-target" do %>
+                  <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
+                <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div id="project_2" class="c-item" style="display: none;">
+          <div>
+            <div>
+              <h4>
+          <strong>Projet</strong>
+          <span class="project-link" onclick="showProject(1)">1</span>
+          <strong>2</strong>
+          <span class="project-link" onclick="showProject(3)">3</span>
+              </h4>
+            </div>
+            <div class="top-project">
+              <div class="d-flex">
+          <h5>
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round"></span>
+            </label>
+            <strong>EMOJILAND</strong>
+          </h5>
+              </div>
+              <div>
+          <%= image_tag "Projet2.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet2.1.png')}')" %>
+              </div>
+              <div>
+          <div>
+            <p>Emoji Land est un projet développé en équipe de 4 : <strong>une marketplace</strong> permettant aux créateurs de vendre leurs émojis uniques et aux utilisateurs d’en acheter pour enrichir leur communication digitale.</p><br>
+            <p>J’y ai contribué en tant que développeur, en travaillant sur <strong>l’architecture du site, l’optimisation de l’expérience utilisateur et le back-end.</strong></p>
+          </div>
+              </div>
+            </div>
+            <div class="middle-project">
+              <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+              <ul class="progress-bar toggle-target">
+          <li class="progress-item">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="grey-frame">Recherche</div>
+          </li>
+          <li class="progress-item">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="grey-frame">Wireframing</div>
+          </li>
+          <li class="progress-item">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="grey-frame">Design</div>
+          </li>
+          <li class="progress-item">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="grey-frame">Development</div>
+          </li>
+          <li class="progress-item">
+            <div class="outer-circle">
+              <div class="inner-circle"></div>
+            </div>
+            <div class="grey-frame">Testing</div>
+          </li>
+              </ul>
+              <p class="toggle-trigger">> En savoir plus?</p>
+              <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <p class="toggle-trigger">> Lire les codes?</p>
+              <%= link_to "https://github.com/ClarisseFab/-emojiland", target: "_blank", class:"hidden toggle-target" do %>
+                <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+        <div id="project_3" class="c-item" style="display: none;">
+          <div>
+            <div>
+              <h4>
+                <strong>Projet</strong>
+                <span class="project-link" onclick="showProject(1)">1</span>
+                <span class="project-link" onclick="showProject(2)">2</span>
+                <strong>3</strong>
+              </h4>
+            </div>
+            <div class="top-project">
+              <div class="d-flex">
+                <h5>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <strong>SITE WEB - <a href="https://www.thelittlefirefly.co.uk/en" target="_blank">The Little Firefly</a></strong>
+                </h5>
+              </div>
+              <div>
+                <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+              </div>
+              <div>
+                <div>
+                  <p>The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales.</p><br>
+                  <p>Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="middle-project">
+              <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+              <ul class="progress-bar toggle-target">
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Recherche</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Wireframing</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Design</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Development</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Testing</div>
+                </li>
+              </ul>
+              <p class="toggle-trigger">> En savoir plus?</p>
+              <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <p class="toggle-trigger">> Lire les codes?</p>
+              <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
+                <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
+<style>
+  @media (max-width: 842px) {
+
+    #projects_section {
+      display: flex;
+      justify-content: center;
+      width: 80%;
+      min-height: calc(100vh - 88px);
+      margin: auto;
+      padding: 0px;
+      margin-top: 44px;
+      background: #F1F1F1;
+    }
+
+    .c-inner {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .c-item {
+      width: 100%;
+    }
+
+    .top-project, .middle-project, .bottom-project {
+      display: flex;
+      flex-direction: column;
+      /* align-items: left; */
+    }
+
+    .left-presentation, .right-presentation {
+      width: 100%;
+    }
+
+    .image {
+      width: 100%;
+      cursor: pointer;
+    }
+
+    .image0 {
+      width: 100%;
+    }
+
+    .progress-bar {
+      list-style: none; /* Remove default list styling */
+      padding: 0px; /* Remove default padding */
+      display: flex;
+      flex-direction: column;
+      gap: 20px !important; /* Space between grid items */
+      width: 100%;
+    }
+
+    .progress-bar li {
+      justify-content: left; /* Align items to the left */
+      width: 100%; /* Full width for each item */
+      margin-left: 20px;
+    }
+
+    .progress-item {
+      display: flex;
+      align-items: center; /* Center items vertically */
+      width: 100%; /* Full width for each item */
+      gap: 10px; /* Space between the circle and the text */
+      margin-bottom: 10px; /* Space between items */
+    }
+
+    #projects_section .top-project {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #projects_section .top-project .right-presentation {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .top-project {
+      h5 {
+        font-family: Montserrat;
+        font-weight: 600;
+        font-style: SemiBold;
+        font-size: 24px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin: 20px 0px;
+      }
+    }
+
+    .middle-project {
+      margin: 0px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;    /* Stack the <p> and <ul> vertically */
+      align-items: left;    /* Align items to the left */
+      text-align: left;   /* Align text to the left */
+      width: 100%;
+      /* ul {
+        gap: 32px 32px;
+      } */
+    }
+
+    .middle-project p {
+      font-family: Montserrat;
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 20px;
+      line-height: 26px;
+      letter-spacing: 0%;
+      text-align: left;
+      margin: 8px 0px;
+    }
+
+    /* .progress-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      width: 100%;
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    } */
+
+    .grey-frame {
+      border-radius: 8px;
+      color: white;
+      padding: 4px 20px;
+    }
+
+    #project_1 {
+      .grey-frame {
+        background: #0E98A9;
+      }
+      .project-link:hover {
+        color: #0E98A9;
+        font-weight: bold;
+      }
+    }
+
+
+    #project_2 {
+      .grey-frame {
+        background: #F98707;
+      }
+      .project-link:hover {
+        color: #F98707;
+        font-weight: bold;
+      }
+    }
+
+    #project_3 {
+      .grey-frame {
+        background: #3B9F22;
+      }
+      a {
+        color : #3B9F22 ;
+        font-weight: bold;
+      }
+      a:hover {
+        color: #d35400;
+      }
+      .project-link:hover {
+        color: #3B9F22;
+        font-weight: bold;
+      }
+    }
+
+    .outer-circle {
+      width: 12px;
+      height: 12px;
+      background-color: grey; /* Outer circle color */
+      border-radius: 50%;     /* Makes it a circle */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .inner-circle {
+      width: 6px;
+      height: 6px;
+      background-color: white; /* Inner circle color */
+      border-radius: 50%;      /* Makes it a circle */
+    }
+
+    .c-item h4 {
+      display: flex;
+      gap: 24px;
+      span {
+        margin-top: auto;
+      }
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 70px;
+      height: 25px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #FFFFFF;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 11px;
+      width: 11px;
+      left: 7px;
+      bottom: 7px;
+      background: #707070;
+      transition: .4s;
+    }
+
+    /* // input:checked + .slider {
+    //   background-color: #2196F3;
+    // }
+
+    // input:checked + .slider:before {
+    //   transform: translateX(26px);
+    // } */
+
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .progress-bar, .image0, .hidden {
+      display: none; /* Initially hide the toggle targets */
+    }
+
+    .toggle-trigger {
+      cursor: pointer; /* Change cursor to indicate it's clickable */
+      text-align: left; /* Align text to the left */
+      width: 100%; /* Ensure full width to align properly within the container */
+      margin: 0; /* Remove any default margins that might affect alignment */
+      padding: 0; /* Remove any default padding that might affect alignment */
+    }
+  }
+</style>

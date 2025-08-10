@@ -232,10 +232,11 @@
     #projects_section {
       display: flex;
       justify-content: center;
-      width: 80%;
-      min-height: calc(100vh - 44px);
+      width: 100%;
+      min-height: calc(100vh + 44px);
       margin: auto;
       padding: 0px;
+      padding-bottom: 44px;
       background: #F1F1F1;
     }
 
@@ -310,13 +311,20 @@
         font-size: 24px;
         line-height: 100%;
         letter-spacing: 0%;
-        margin: 20px 0px;
+        margin: 20px 16px;
       }
+    }
+
+    .top-project p {
+      margin-left: 16px;
+      margin-right: 16px;
     }
 
     .middle-project {
       margin: 0px;
       margin-top: 20px;
+      margin-left: 16px;
+      margin-right: 16px;
       display: flex;
       flex-direction: column;    /* Stack the <p> and <ul> vertically */
       align-items: left;    /* Align items to the left */
@@ -413,6 +421,8 @@
     .c-item h4 {
       display: flex;
       gap: 24px;
+      margin-left: 16px;
+      margin-right: 16px;
       span {
         margin-top: auto;
       }
@@ -477,7 +487,7 @@
       cursor: pointer; /* Change cursor to indicate it's clickable */
       text-align: left; /* Align text to the left */
       width: 100%; /* Ensure full width to align properly within the container */
-      margin: 0; /* Remove any default margins that might affect alignment */
+      margin: 0px 16px; /* Remove any default margins that might affect alignment */
       padding: 0; /* Remove any default padding that might affect alignment */
     }
   }

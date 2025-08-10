@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "Pierre Portfolio"
+  default from: "Mon portfolio de developper"
   layout "mailer"
 end

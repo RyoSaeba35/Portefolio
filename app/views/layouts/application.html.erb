@@ -127,11 +127,14 @@
       document.querySelectorAll('.toggle-trigger').forEach(trigger => {
         trigger.addEventListener('click', function() {
           const target = this.nextElementSibling;
+          const icon = this.querySelector('i');
           if (target.classList.contains('toggle-target')) {
             if (target.style.display === 'none' || target.style.display === '') {
               target.style.display = 'block'; // Show the target
+              icon.classList.replace('fa-chevron-right', 'fa-chevron-down'); // Change icon to down
             } else {
               target.style.display = 'none'; // Hide the target
+              icon.classList.replace('fa-chevron-down', 'fa-chevron-right'); // Change icon to right
             }
           }
         });

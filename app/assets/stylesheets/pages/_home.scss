@@ -1,7 +1,5 @@
-
-
 body{
-  // min-height: 100vh;
+  min-height: calc(100vh - 88px);
   display: flex;
   flex-direction: column;
   background: #F1F1F1;

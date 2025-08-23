@@ -1,7 +1,7 @@
 <div id="projects_section">
   <div class="center-section">
       <div class="c-inner">
-        <div id="project_1" class="c-item"  style="display: block;">
+        <div id="project_1" class="c-item">
           <div>
             <div>
               <h4>
@@ -32,7 +32,7 @@
               </div>
             </div>
             <div class="middle-project">
-                <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+                <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
                 <ul class="progress-bar toggle-target">
                   <li class="progress-item">
                     <div class="outer-circle">
@@ -65,9 +65,9 @@
                     <div class="grey-frame">Testing</div>
                   </li>
                 </ul>
-                <p class="toggle-trigger">> En savoir plus?</p>
+                <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
                 <%= image_tag "Projet1.2.png", alt: "Photo", class: "image0 toggle-target" %>
-                <p class="toggle-trigger">> Lire les codes?</p>
+                <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
                 <%= link_to "https://github.com/RyoSaeba35/Flashcards-Wars-version-originale", target: "_blank", class:"hidden toggle-target" do %>
                   <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
                 <% end %>
@@ -75,14 +75,14 @@
           </div>
         </div>
 
-        <div id="project_2" class="c-item" style="display: none;">
+        <div id="project_2" class="c-item">
           <div>
             <div>
               <h4>
-          <strong>Projet</strong>
-          <span class="project-link" onclick="showProject(1)">1</span>
-          <strong>2</strong>
-          <span class="project-link" onclick="showProject(3)">3</span>
+                <strong>Projet</strong>
+                <span class="project-link" onclick="showProject(1)">1</span>
+                <strong>2</strong>
+                <span class="project-link" onclick="showProject(3)">3</span>
               </h4>
             </div>
             <div class="top-project">
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="middle-project">
-              <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
               <ul class="progress-bar toggle-target">
           <li class="progress-item">
             <div class="outer-circle">
@@ -139,9 +139,9 @@
             <div class="grey-frame">Testing</div>
           </li>
               </ul>
-              <p class="toggle-trigger">> En savoir plus?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
               <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0 toggle-target" %>
-              <p class="toggle-trigger">> Lire les codes?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
               <%= link_to "https://github.com/ClarisseFab/-emojiland", target: "_blank", class:"hidden toggle-target" do %>
                 <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
               <% end %>
@@ -149,7 +149,8 @@
             </div>
           </div>
         </div>
-        <div id="project_3" class="c-item" style="display: none;">
+
+        <div id="project_3" class="c-item">
           <div>
             <div>
               <h4>
@@ -180,7 +181,7 @@
               </div>
             </div>
             <div class="middle-project">
-              <p class="toggle-trigger">> Où suis-je dans le Working process?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
               <ul class="progress-bar toggle-target">
                 <li class="progress-item">
                   <div class="outer-circle">
@@ -213,9 +214,9 @@
                   <div class="grey-frame">Testing</div>
                 </li>
               </ul>
-              <p class="toggle-trigger">> En savoir plus?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
               <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
-              <p class="toggle-trigger">> Lire les codes?</p>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
               <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
                 <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
               <% end %>
@@ -240,8 +241,17 @@
       background: #F1F1F1;
     }
 
-    .c-inner {
+    .center-section {
       width: 100%;
+      overflow: hidden;
+      position: relative;
+      touch-action: pan-y; /* Allow vertical scrolling but capture horizontal swipes */
+}
+
+    .c-inner {
+      display: flex;
+      width: 100%;
+      transition: transform 0.3s ease;
       margin-top: 20px;
     }
 
@@ -249,6 +259,7 @@
       margin: 0px;
       width: 100%;
       padding: 0;
+      flex-shrink: 0;
     }
 
     .top-project, .middle-project, .bottom-project {
@@ -425,8 +436,13 @@
       gap: 24px;
       margin-left: 8px;
       margin-right: 8px;
+      font-size: 24px;
       span {
         margin-top: auto;
+      }
+      strong {
+        font-weight: bold;
+        font-size: 36px;
       }
     }
 

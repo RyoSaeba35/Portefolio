@@ -40,6 +40,7 @@
     </style>
     <!-- In your view file (e.g., app/views/your_view.html.erb) -->
     <script>
+      // Smooth scrolling for anchor links
       document.addEventListener("DOMContentLoaded", function() {
         const links = document.querySelectorAll(".scroll-link");
 
@@ -60,16 +61,40 @@
         });
       });
 
-      function showProject(projectNumber) {
-        console.log(`Showing project ${projectNumber}`);
-        document.querySelectorAll('.c-item').forEach(item => {
-          item.style.display = 'none';
-        });
-        const selectedProject = document.getElementById(`project_${projectNumber}`);
-        if (selectedProject) {
-          selectedProject.style.display = 'block';
+      // Function to show a specific project and hide others (desktop only)
+
+      // Initialize desktop-specific behavior
+      document.addEventListener("DOMContentLoaded", function() {
+        const isDesktop = window.innerWidth > 842; // Adjust the breakpoint as needed
+
+        if (isDesktop) {
+          function showProject(projectNumber) {
+            console.log(`Showing project ${projectNumber}`);
+            document.querySelectorAll('.c-item').forEach(item => {
+              item.style.display = 'none';
+            });
+            const selectedProject = document.getElementById(`project_${projectNumber}`);
+            if (selectedProject) {
+              selectedProject.style.display = 'block';
+            }
+          }
+
+          // Show the first project by default on desktop
+          showProject(1);
+
+          // Bind project links to showProject function (if needed)
+          const projectLinks = document.querySelectorAll(".project-link");
+          projectLinks.forEach(link => {
+            link.addEventListener("click", function() {
+              const projectNumber = parseInt(this.textContent);
+              showProject(projectNumber);
+            });
+          });
         }
-      }
+      });
+
+
+      // Modal functionality
       function openModal(imgSrc) {
         console.log(`Opening modal with ${imgSrc}`);
         var modal = document.getElementById("myModal");
@@ -127,14 +152,76 @@
       document.querySelectorAll('.toggle-trigger').forEach(trigger => {
         trigger.addEventListener('click', function() {
           const target = this.nextElementSibling;
+          const icon = this.querySelector('i');
           if (target.classList.contains('toggle-target')) {
             if (target.style.display === 'none' || target.style.display === '') {
               target.style.display = 'block'; // Show the target
+              icon.classList.replace('fa-chevron-right', 'fa-chevron-down'); // Change icon to down
             } else {
               target.style.display = 'none'; // Hide the target
+              icon.classList.replace('fa-chevron-down', 'fa-chevron-right'); // Change icon to right
             }
           }
         });
+      });
+
+      // Swipe functionality for mobile only
+      document.addEventListener("DOMContentLoaded", function() {
+        // Check if the screen width is within the mobile range
+        const isMobile = window.innerWidth <= 842; // Adjust the breakpoint as needed
+
+        if (isMobile) {
+          const carouselWrapper = document.querySelector(".c-inner");
+          const carouselSlides = document.querySelectorAll(".c-item");
+          const projectLinks = document.querySelectorAll(".project-link");
+          let currentIndex = 0;
+          let startX = 0;
+          let isDragging = false;
+
+          // Function to update carousel position
+          function updateCarousel() {
+            carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+          }
+
+          // Handle project link clicks
+          projectLinks.forEach(link => {
+            link.addEventListener("click", function() {
+              const projectNumber = parseInt(this.textContent) - 1;
+              currentIndex = projectNumber;
+              updateCarousel();
+            });
+          });
+
+          // Touch event handlers for swipe
+          carouselWrapper.addEventListener("touchstart", (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+          });
+
+          carouselWrapper.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            const x = e.touches[0].clientX;
+            const diff = startX - x;
+
+            // Threshold for swipe (e.g., 50px)
+            if (diff > 50 && currentIndex < carouselSlides.length - 1) {
+              currentIndex++;
+              updateCarousel();
+              isDragging = false;
+            } else if (diff < -50 && currentIndex > 0) {
+              currentIndex--;
+              updateCarousel();
+              isDragging = false;
+            }
+          });
+
+          carouselWrapper.addEventListener("touchend", () => {
+            isDragging = false;
+          });
+
+          // Initialize carousel
+          updateCarousel();
+        }
       });
     </script>
   </body>

@@ -31,22 +31,6 @@ html {
   vertical-align: middle;
 }
 
-.c-inner {
-  display: flex;
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
-}
-
-.c-item {
-  /* height: 100vh; */
-  padding: 20px;
-  background: #F1F1F1; /* Example background color */
-  flex: 0 0 auto;
-  scroll-snap-align: start;
-  width: 100%; /* Adjust width as needed */
-}
-
 .c-item h4 strong{
   font-family: Montserrat;
   font-weight: 700;
@@ -55,6 +39,24 @@ html {
 
   line-height: 100%;
   letter-spacing: 0%;
+}
+
+@media (min-width: 842px) {
+  .c-inner {
+    display: flex;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS devices */
+  }
+
+  .c-item {
+    /* height: 100vh; */
+    padding: 20px;
+    background: #F1F1F1; /* Example background color */
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100%; /* Adjust width as needed */
+  }
 }
 
 /* html.no-scroll {

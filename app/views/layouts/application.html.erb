@@ -64,33 +64,33 @@
       // Function to show a specific project and hide others (desktop only)
 
       // Initialize desktop-specific behavior
-      // document.addEventListener("DOMContentLoaded", function() {
-      //   const isDesktop = window.innerWidth > 842; // Adjust the breakpoint as needed
-      //   if (isDesktop) {
-      //     function showProject(projectNumber) {
-      //       console.log(`Showing project ${projectNumber}`);
-      //       document.querySelectorAll('.c-item').forEach(item => {
-      //         item.style.display = 'none';
-      //       });
-      //       const selectedProject = document.getElementById(`project_${projectNumber}`);
-      //       if (selectedProject) {
-      //         selectedProject.style.display = 'block';
-      //       }
-      //     }
+      document.addEventListener("DOMContentLoaded", function() {
+        const isDesktop = window.innerWidth > 842; // Adjust the breakpoint as needed
+        if (isDesktop) {
+          function showProject(projectNumber) {
+            console.log(`Showing project ${projectNumber}`);
+            document.querySelectorAll('.c-item').forEach(item => {
+              item.style.display = 'none';
+            });
+            const selectedProject = document.getElementById(`project_${projectNumber}`);
+            if (selectedProject) {
+              selectedProject.style.display = 'block';
+            }
+          }
 
-      //     // Show the first project by default on desktop
-      //     showProject(1);
+          // Show the first project by default on desktop
+          showProject(1);
 
-      //     // Bind project links to showProject function (if needed)
-      //     const projectLinks = document.querySelectorAll(".project-link");
-      //     projectLinks.forEach(link => {
-      //       link.addEventListener("click", function() {
-      //         const projectNumber = parseInt(this.textContent);
-      //         showProject(projectNumber);
-      //       });
-      //     });
-      //   }
-      // });
+          // Bind project links to showProject function (if needed)
+          const projectLinks = document.querySelectorAll(".project-link");
+          projectLinks.forEach(link => {
+            link.addEventListener("click", function() {
+              const projectNumber = parseInt(this.textContent);
+              showProject(projectNumber);
+            });
+          });
+        }
+      });
 
 
       // Modal functionality

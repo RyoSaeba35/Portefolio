@@ -164,12 +164,10 @@
         });
       });
 
-      // Swipe functionality for mobile only
       document.addEventListener("DOMContentLoaded", function() {
-        // Check if the screen width is within the mobile range
-        const isMobile = window.innerWidth <= 842; // Adjust the breakpoint as needed
-
+        const isMobile = window.innerWidth <= 842;
         if (isMobile) {
+          // Main carousel logic
           const carouselWrapper = document.querySelector(".c-inner");
           const carouselSlides = document.querySelectorAll(".c-item");
           const projectLinks = document.querySelectorAll(".project-link");
@@ -177,12 +175,10 @@
           let startX = 0;
           let isDragging = false;
 
-          // Function to update carousel position
           function updateCarousel() {
             carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
           }
 
-          // Handle project link clicks
           projectLinks.forEach(link => {
             link.addEventListener("click", function() {
               const projectNumber = parseInt(this.textContent) - 1;
@@ -191,7 +187,6 @@
             });
           });
 
-          // Touch event handlers for swipe
           carouselWrapper.addEventListener("touchstart", (e) => {
             startX = e.touches[0].clientX;
             isDragging = true;
@@ -201,8 +196,6 @@
             if (!isDragging) return;
             const x = e.touches[0].clientX;
             const diff = startX - x;
-
-            // Threshold for swipe (e.g., 50px)
             if (diff > 50 && currentIndex < carouselSlides.length - 1) {
               currentIndex++;
               updateCarousel();
@@ -218,8 +211,46 @@
             isDragging = false;
           });
 
-          // Initialize carousel
           updateCarousel();
+
+          // Nested carousel logic
+          const nestedCarousels = document.querySelectorAll(".c-in");
+          nestedCarousels.forEach((nestedCarousel) => {
+            const nestedSlides = nestedCarousel.querySelectorAll(".c-it");
+            let nestedCurrentIndex = 0;
+            let nestedStartX = 0;
+            let nestedIsDragging = false;
+
+            function updateNestedCarousel(nestedCarousel, nestedCurrentIndex) {
+              nestedCarousel.style.transform = `translateX(-${nestedCurrentIndex * 100}%)`;
+            }
+
+            nestedCarousel.addEventListener("touchstart", (e) => {
+              nestedStartX = e.touches[0].clientX;
+              nestedIsDragging = true;
+            });
+
+            nestedCarousel.addEventListener("touchmove", (e) => {
+              if (!nestedIsDragging) return;
+              const x = e.touches[0].clientX;
+              const diff = nestedStartX - x;
+              if (diff > 50 && nestedCurrentIndex < nestedSlides.length - 1) {
+                nestedCurrentIndex++;
+                updateNestedCarousel(nestedCarousel, nestedCurrentIndex);
+                nestedIsDragging = false;
+              } else if (diff < -50 && nestedCurrentIndex > 0) {
+                nestedCurrentIndex--;
+                updateNestedCarousel(nestedCarousel, nestedCurrentIndex);
+                nestedIsDragging = false;
+              }
+            });
+
+            nestedCarousel.addEventListener("touchend", () => {
+              nestedIsDragging = false;
+            });
+
+            updateNestedCarousel(nestedCarousel, nestedCurrentIndex);
+          });
         }
       });
     </script>

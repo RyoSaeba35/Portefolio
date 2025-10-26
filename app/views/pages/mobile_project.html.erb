@@ -75,14 +75,19 @@
                   <li>Figma</li>
                 </ul>
                 <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-                <div class="image-scroll toggle-target">
-                  <div class="image-scroll-inner">
-                    <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0" %>
-                    <%= image_tag "Projet1.4.jpg", alt: "Photo", class: "image0" %>
-                    <%= image_tag "Projet1.5.jpg", alt: "Photo", class: "image0" %>
-                    <%= image_tag "Projet1.6.jpg", alt: "Photo", class: "image0" %>
-                    <%= image_tag "Projet1.7.jpg", alt: "Photo", class: "image0" %>
-                    <%= image_tag "Projet1.8.jpg", alt: "Photo", class: "image0" %>
+                <div class="image-gallery toggle-target">
+                  <div class="main-image">
+                    <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage" %>
+                  </div>
+                  <div class="center-thumbnails">
+                    <div class="thumbnails">
+                      <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage('#{asset_path('Projet1.3.jpg')}')" %>
+                      <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.4.jpg')}')" %>
+                      <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.5.jpg')}')" %>
+                      <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.6.jpg')}')" %>
+                      <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.7.jpg')}')" %>
+                      <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.8.jpg')}')" %>
+                    </div>
                   </div>
                 </div>
                 <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
@@ -297,27 +302,59 @@
       flex-shrink: 0;
     }
 
-    .image-scroll {
+    .image-gallery {
       display: none;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      -webkit-overflow-scrolling: touch;
-    }
-    .image-scroll.block {
-      display: block;
-    }
-    .image-scroll-inner {
-      display: flex;
-      gap: 10px;
-      padding-bottom: 10px;
-    }
-    .image-scroll-inner img {
-      scroll-snap-align: start;
-      width: 90%;
-      flex-shrink: 0;
+      margin-top: 10px;
+      margin-left: -32px;
     }
 
-    .top-project, .middle-project, .bottom-project {
+    .image-gallery.block {
+      display: block;
+    }
+
+    .main-image img {
+      width: 100vw;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .center-thumbnails {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0px;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap; /* Allow thumbnails to wrap to the next line if needed */
+      gap: 8px;
+      margin-top: 10px;
+      padding: auto;
+      justify-content: flex-start; /* Align thumbnails to the left */
+      max-width: 100%;
+      overflow: hidden; /* Prevent any overflow issues */
+    }
+
+    .thumbnail {
+      width: 50px; /* Smaller width */
+      height: 50px; /* Smaller height */
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 4px;
+      opacity: 0.7;
+      transition: opacity 0.2s, border 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .thumbnail:hover {
+      opacity: 0.9;
+    }
+
+    .thumbnail.active {
+      opacity: 1;
+      border: 2px solid #007bff;
+    }
+
+    .top-project, .bottom-project {
       display: flex;
       flex-direction: column;
       /* align-items: left; */

@@ -192,7 +192,19 @@
           updateCarousel();
         }
       });
-    </script>
 
+      function changeImage(src) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = src;
+
+        // Remove active class from all thumbnails
+        document.querySelectorAll('.thumbnail').forEach(thumb => {
+          thumb.classList.remove('active');
+        });
+
+        // Add active class to the clicked thumbnail
+        event.currentTarget.classList.add('active');
+      }
+    </script>
   </body>
 </html>

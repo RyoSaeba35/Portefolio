@@ -75,7 +75,7 @@
                   <li>Figma</li>
                 </ul>
                 <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-                <%= image_tag "Projet1.2.png", alt: "Photo", class: "image0 toggle-target" %>
+                <%# <%= image_tag "Projet1.2.png", alt: "Photo", class: "image0 toggle-target" %>
                 <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
                 <%= link_to "https://github.com/RyoSaeba35/Flashcards-Wars-version-originale", target: "_blank", class:"hidden toggle-target" do %>
                   <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
@@ -158,7 +158,7 @@
                 <li>Figma</li>
               </ul>
               <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-              <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <%# <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0 toggle-target" %>
               <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
               <%= link_to "https://github.com/ClarisseFab/-emojiland", target: "_blank", class:"hidden toggle-target" do %>
                 <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
@@ -241,7 +241,7 @@
                 <li>PostgreSQL</li>
               </ul>
               <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-              <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <%# <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
               <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p> %>
               <%# <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
                 <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
@@ -292,6 +292,8 @@
       display: flex;
       flex-direction: column;
       /* align-items: left; */
+      margin-left: 16px;
+      margin-right: 16px;
     }
 
     .left-presentation, .right-presentation {
@@ -366,20 +368,20 @@
         font-size: 24px;
         line-height: 100%;
         letter-spacing: 0%;
-        margin: 20px 8px;
+        margin: 20px 0px;
       }
     }
 
-    .top-project p {
+    /* .top-project p {
       margin-left: 8px;
       margin-right: 8px;
-    }
+    } */
 
     .middle-project {
       margin: 0px;
       margin-top: 20px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
       display: flex;
       flex-direction: column;    /* Stack the <p> and <ul> vertically */
       align-items: left;    /* Align items to the left */
@@ -476,8 +478,8 @@
     .c-item h4 {
       display: flex;
       gap: 24px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
       font-size: 24px;
       span {
         margin-top: auto;

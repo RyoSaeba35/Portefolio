@@ -301,13 +301,17 @@
       transition: transform 0.3s ease;
       margin-top: 20px;
       overflow: hidden;
-      touch-action: pan-y; /* Allow vertical scrolling but capture horizontal swipes */
+      touch-action: pan-y;
+      /* Add this to prevent flex from showing all items at once */
+      position: relative;
     }
     .c-it {
       margin: 0px;
       width: 100%;
       padding: 0;
       flex-shrink: 0;
+      /* Add this to prevent flex from shrinking items */
+      flex: 0 0 100%;
     }
 
     .top-project, .middle-project, .bottom-project {
@@ -564,7 +568,7 @@
       border-radius: 50%;
     }
 
-    .progress-bar, .c-in, .hidden {
+    .progress-bar, .toggle-target, .hidden {
       display: none; /* Initially hide the toggle targets */
     }
 

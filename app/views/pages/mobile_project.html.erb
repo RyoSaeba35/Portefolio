@@ -9,6 +9,7 @@
                 <strong>1</strong>
                 <span class="project-link" onclick="showProject(2)">2</span>
                 <span class="project-link" onclick="showProject(3)">3</span>
+                <span class="project-link" onclick="showProject(4)">4</span>
               </h4>
             </div>
             <div class="top-project">
@@ -106,6 +107,7 @@
                 <span class="project-link" onclick="showProject(1)">1</span>
                 <strong>2</strong>
                 <span class="project-link" onclick="showProject(3)">3</span>
+                <span class="project-link" onclick="showProject(4)">4</span>
               </h4>
             </div>
             <div class="top-project">
@@ -190,6 +192,7 @@
                 <span class="project-link" onclick="showProject(1)">1</span>
                 <span class="project-link" onclick="showProject(2)">2</span>
                 <strong>3</strong>
+                <span class="project-link" onclick="showProject(4)">4</span>
               </h4>
             </div>
             <div class="top-project">
@@ -209,6 +212,88 @@
                 <div>
                   <p>The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales.</p><br>
                   <p>Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong></p>
+                </div>
+              </div>
+            </div>
+            <div class="middle-project">
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
+              <ul class="progress-bar toggle-target">
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Recherche</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Wireframing</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Design</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Development</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Testing</div>
+                </li>
+              </ul>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Technologies utilisées</p>
+              <ul class="hidden toggle-target technologies-used">
+                <li>Ruby on Rails</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PostgreSQL</li>
+              </ul>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
+              <%# <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p> %>
+              <%# <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
+                <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
+              <%# <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div id="project_4" class="c-item">
+          <div>
+            <div>
+              <h4>
+                <strong>Projet</strong>
+                <span class="project-link" onclick="showProject(1)">1</span>
+                <span class="project-link" onclick="showProject(2)">2</span>
+                <span class="project-link" onclick="showProject(3)">3</span>
+                <strong>4</strong>
+              </h4>
+            </div>
+            <div class="top-project">
+              <div class="d-flex">
+                <h5>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <strong><a href="https://www.vulcainvpn.com/" target="_blank">Vulcain VPN</a></strong>
+              </div>
+              <div>
+                <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+              </div>
+              <div>
+                <div>
+                  <p>Vulcain VPN est un service VPN simple et efficace, basé sur WireGuard, pour une navigation sécurisée et anonyme. J’ai conçu la plateforme complète : abonnement en ligne, génération de configurations (QR code ou fichier), et mise en place du serveur. Les utilisateurs se connectent en quelques clics via l’application WireGuard.</p><br>
+                  <p>Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous.</p><br>
                 </div>
               </div>
             </div>
@@ -286,7 +371,7 @@
       overflow: hidden;
       position: relative;
       touch-action: pan-y; /* Allow vertical scrolling but capture horizontal swipes */
-}
+    }
 
     .c-inner {
       display: flex;
@@ -518,6 +603,23 @@
       }
       a:hover {
         color: #d35400;
+      }
+      .project-link:hover {
+        color: black;
+        font-weight: 400 !important;
+      }
+    }
+
+    #project_4 {
+      .grey-frame {
+        background: #ff6e08;
+      }
+      a {
+        color : #432923 ;
+        font-weight: bold;
+      }
+      a:hover {
+        color: #ff6e08;
       }
       .project-link:hover {
         color: black;

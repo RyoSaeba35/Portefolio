@@ -155,6 +155,15 @@
 
           function updateCarousel() {
             carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Close all toggle targets when carousel slide changes
+            document.querySelectorAll('.toggle-target').forEach(target => {
+              target.style.display = 'none';
+            });
+            // Reset all toggle icons to chevron-right
+            document.querySelectorAll('.toggle-trigger i').forEach(icon => {
+              icon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+            });
           }
 
           projectLinks.forEach(link => {
@@ -192,6 +201,7 @@
           updateCarousel();
         }
       });
+
 
       function changeImage(src) {
         const mainImage = document.getElementById('mainImage');

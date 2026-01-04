@@ -48,6 +48,7 @@
                   <strong>1</strong>
                   <span class="project-link" onclick="showProject(2)">2</span>
                   <span class="project-link" onclick="showProject(3)">3</span>
+                  <span class="project-link" onclick="showProject(4)">4</span>
                 </h4>
               </div>
               <div class="top-project">
@@ -117,6 +118,7 @@
                   <span class="project-link" onclick="showProject(1)">1</span>
                   <strong>2</strong>
                   <span class="project-link" onclick="showProject(3)">3</span>
+                  <span class="project-link" onclick="showProject(4)">4</span>
                 </h4>
               </div>
               <div class="top-project">
@@ -191,6 +193,7 @@
                   <span class="project-link" onclick="showProject(1)">1</span>
                   <span class="project-link" onclick="showProject(2)">2</span>
                   <strong>3</strong>
+                  <span class="project-link" onclick="showProject(4)">4</span>
                 </h4>
               </div>
               <div class="top-project">
@@ -213,6 +216,81 @@
                   <div>
                     <p>The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales.</p><br>
                     <p>Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong></p><br>
+                  </div>
+                </div>
+              </div>
+              <div class="middle-project">
+                <p><strong>Où suis-je</strong> dans le Working process?</p>
+                <ul class="progress-bar" >
+                  <li class="grey-frame">Recherche</li>
+                  <li class="grey-frame">Wireframing</li>
+                  <li class="grey-frame">Design</li>
+                  <li class="grey-frame">Development</li>
+                  <li class="grey-frame">Testing</li>
+                  <li>
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="bottom-project">
+                <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0" %>
+              </div>
+            </div>
+          </div>
+
+          <div id="project_4" class="c-item" style="display: none;">
+            <div>
+              <div class="d-flex justify-content-end">
+                <h4>
+                  <strong>Projet</strong>
+                  <span class="project-link" onclick="showProject(1)">1</span>
+                  <span class="project-link" onclick="showProject(2)">2</span>
+                  <span class="project-link" onclick="showProject(3)">3</span>
+                  <strong>4</strong>
+                </h4>
+              </div>
+              <div class="top-project">
+                <div class="left-presentation">
+                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+                </div>
+                <div class="right-presentation">
+                  <div class="d-flex justify-content-between">
+                    <h5>
+                      <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                      <strong><a href="https://www.vulcainvpn.com/" target="_blank">Vulcain VPN</a></strong>
+                    </h5>
+                    <%# <%= link_to "https://github.com/RyoSaeba35/Portefolio", target: "_blank" do %>
+                      <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
+                    <%# <% end %>
+                  </div>
+                  <div>
+                    <p>Vulcain VPN est un service VPN simple et efficace, basé sur WireGuard, pour une navigation sécurisée et anonyme. J’ai conçu la plateforme complète : abonnement en ligne, génération de configurations (QR code ou fichier), et mise en place du serveur. Les utilisateurs se connectent en quelques clics via l’application WireGuard.</p><br>
+                    <p>Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous.</p><br>
                   </div>
                 </div>
               </div>

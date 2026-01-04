@@ -103,6 +103,23 @@
   }
 }
 
+#project_4 {
+  .grey-frame {
+    background: #ff6e08;
+  }
+  a {
+    color : #432923 ;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #ff6e08;
+  }
+  .project-link:hover {
+    color: black;
+    font-weight: 400 !important;
+  }
+}
+
 .outer-circle {
   width: 12px;
   height: 12px;

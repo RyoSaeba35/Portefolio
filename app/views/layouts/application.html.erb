@@ -203,12 +203,13 @@
       });
 
 
-      function changeImage(src) {
-        const mainImage = document.getElementById('mainImage');
+      function changeImage(src, mainImageId) {
+        const mainImage = document.getElementById(mainImageId);
         mainImage.src = src;
 
         // Remove active class from all thumbnails
-        document.querySelectorAll('.thumbnail').forEach(thumb => {
+        const thumbnails = event.currentTarget.parentNode.querySelectorAll('.thumbnail');
+        thumbnails.forEach(thumb => {
           thumb.classList.remove('active');
         });
 

@@ -53,7 +53,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet1.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet1.1.png')}')" %>
+                  <%= image_tag "Projet1.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -103,20 +103,33 @@
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="bottom-project">
-                <div class="image-gallery">
-                  <div class="main-image">
-                    <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage" %>
-                  </div>
-                  <div class="center-thumbnails">
-                    <div class="thumbnails">
-                      <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage('#{asset_path('Projet1.3.jpg')}')" %>
-                      <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.4.jpg')}')" %>
-                      <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.5.jpg')}')" %>
-                      <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.6.jpg')}')" %>
-                      <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.7.jpg')}')" %>
-                      <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage('#{asset_path('Projet1.8.jpg')}')" %>
+
+                <div class="technologies-used mt-2">
+                  <p><strong>Technologies utilisées</strong></p>
+                  <ul>
+                    <li>Ruby on Rails</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Figma</li>
+                  </ul>
+                </div>
+                <div class="mt-2">
+                  <p><strong>Gallery</strong></p>
+                  <div class="image-gallery">
+                    <div class="main-image">
+                      <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage", onclick: "openModal(this.src)" %>
+                    </div>
+                    <div class="center-thumbnails">
+                      <div class="thumbnails">
+                        <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -137,7 +150,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet2.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet2.1.png')}')" %>
+                  <%= image_tag "Projet2.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -192,9 +205,36 @@
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="bottom-project">
-                <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0" %>
+
+                <div class="technologies-used mt-2">
+                  <p><strong>Technologies utilisées</strong></p>
+                  <ul>
+                    <li>Ruby on Rails</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Figma</li>
+                  </ul>
+                </div>
+                <div class="mt-2">
+                  <p><strong>Gallery</strong></p>
+                  <div class="image-gallery">
+                    <div class="main-image">
+                      <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage", onclick: "openModal(this.src)" %>
+                    </div>
+                    <div class="center-thumbnails">
+                      <div class="thumbnails">
+                        <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -212,7 +252,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -267,9 +307,36 @@
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="bottom-project">
-                <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0" %>
+
+                <div class="technologies-used mt-2">
+                  <p><strong>Technologies utilisées</strong></p>
+                  <ul>
+                    <li>Ruby on Rails</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Figma</li>
+                  </ul>
+                </div>
+                <div class="mt-2">
+                  <p><strong>Gallery</strong></p>
+                  <div class="image-gallery">
+                    <div class="main-image">
+                      <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage", onclick: "openModal(this.src)" %>
+                    </div>
+                    <div class="center-thumbnails">
+                      <div class="thumbnails">
+                        <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -287,7 +354,7 @@
               </div>
               <div class="top-project">
                 <div class="left-presentation">
-                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+                  <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
                 </div>
                 <div class="right-presentation">
                   <div class="d-flex justify-content-between">
@@ -342,9 +409,36 @@
                     </div>
                   </li>
                 </ul>
-              </div>
-              <div class="bottom-project">
-                <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0" %>
+
+                <div class="technologies-used mt-2">
+                  <p><strong>Technologies utilisées</strong></p>
+                  <ul>
+                    <li>Ruby on Rails</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PostgreSQL</li>
+                    <li>Figma</li>
+                  </ul>
+                </div>
+                <div class="mt-2">
+                  <p><strong>Gallery</strong></p>
+                  <div class="image-gallery">
+                    <div class="main-image">
+                      <%= image_tag "Projet1.3.jpg", alt: "Photo", class: "image0", id: "mainImage", onclick: "openModal(this.src)" %>
+                    </div>
+                    <div class="center-thumbnails">
+                      <div class="thumbnails">
+                        <%= image_tag "Projet1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                        <%= image_tag "Projet1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src)" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

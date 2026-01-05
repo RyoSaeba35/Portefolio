@@ -199,20 +199,63 @@
 .slider.round:before {
   border-radius: 50%;
 }
+@media (min-width: 842px) {
+  .technologies-used ul {
+    display: flex;
+    flex-wrap: wrap;
+    width: 92;
+    height: 52;
+    top: 459px;
+    left: 366px;
+    border-width: 1px;
+    opacity: 1;
+    border-radius: 1000px;
+    padding-top: 2px;
+    padding-right: 13px;
+    padding-bottom: 2px;
+    // padding-left: 13px;
+    gap: 10px;
+  }
+
+  .technologies-used li {
+    padding: 8px 26px;
+    border-radius: 48px;
+    background: #EDEDED;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: 3%;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #D9D9D9;
+  }
+}
 
 .image-gallery {
   display: block;
   margin-top: 10px;
-  margin-left: -32px;
+  // margin-left: -32px;
 }
 
 .image-gallery.block {
   display: block;
 }
 
+.main-image {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center;     /* Centers vertically */
+  height: 100%; /* Ensure the container has a defined height */
+}
+
 .main-image img {
-  width: 100vw;
+  width: 300px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Optional: Remove any default margin/padding */
+  margin: 0;
+  padding: 0;
 }
 
 .center-thumbnails {

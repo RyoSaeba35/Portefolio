@@ -302,7 +302,7 @@
                   <strong><a href="https://www.vulcainvpn.com/" target="_blank">Vulcain VPN</a></strong>
               </div>
               <div>
-                <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+                <%= image_tag "VulcainVPN_1.1.jpeg", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
               </div>
               <div>
                 <div>
@@ -358,6 +358,23 @@
                 <li>Railway</li>
               </ul>
               <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
+              <div class="image-gallery toggle-target">
+                <div class="main-image">
+                  <%= image_tag "VulcainVPN_1.2.jpeg", alt: "Photo", class: "image0", id: "mainImage3" %>
+                </div>
+                <div class="center-thumbnails">
+                  <div class="thumbnails">
+                    <%= image_tag "VulcainVPN_1.2.jpeg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.3.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.4.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.5.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.6.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.7.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.8.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "VulcainVPN_1.9.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                  </div>
+                </div>
+              </div>
               <%# <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
               <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p> %>
               <%# <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>

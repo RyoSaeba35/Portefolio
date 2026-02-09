@@ -31,12 +31,13 @@
   #about_section .right-presentation {
     display: flex;
     align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: right;
   }
 
   #about_section .left-presentation {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: end;
     gap: 1.25rem;

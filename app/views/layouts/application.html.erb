@@ -24,10 +24,6 @@
     <%= render 'shared/navbar' %>
     <turbo-frame id="content">
       <%= yield %>
-      <!-- Contenu par défaut pour les grands écrans -->
-      <% if browser.platform.desktop? || request.from_smartphone? %>
-        <%= render 'shared/about_section' %>
-      <% end %>
     </turbo-frame>
     <%= render 'shared/footer' %>
     <%= render 'shared/mini_navbar' %>

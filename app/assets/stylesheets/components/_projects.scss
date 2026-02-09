@@ -69,6 +69,13 @@
   .grey-frame {
     background: #0E98A9;
   }
+  a {
+    color : #0E98A9 ;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #d35400;
+  }
   .project-link:hover {
     color: #0E98A9;
     font-weight: bold;
@@ -79,6 +86,13 @@
 #project_2 {
   .grey-frame {
     background: #F98707;
+  }
+  a {
+    color : #F98707 ;
+    font-weight: bold;
+  }
+  a:hover {
+    color: #0B8457;
   }
   .project-link:hover {
     color: #F98707;

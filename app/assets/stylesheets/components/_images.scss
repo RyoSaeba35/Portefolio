@@ -1,14 +1,14 @@
 .avatar {
-  width: 15vw;   /* Adjust this value as needed (e.g., 15vw for a larger avatar, 10vw for a smaller one) */
-  height: 15vw;  /* Same as width to keep it round */
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
-  max-width: 120px; /* Optional: Set a max-width to prevent it from becoming too large on very wide screens */
-  max-height: 120px; /* Optional: Set a max-height to maintain aspect ratio */
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .photo {
   width: fit-content;
-  max-width: 30vw;
+  max-width: 28vw;
   max-height: auto;
   /* box-shadow: 0 0.0625rem 0.125rem rgba(0,0,0,0.2); */
 }

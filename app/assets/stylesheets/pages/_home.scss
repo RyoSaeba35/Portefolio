@@ -12,6 +12,8 @@ body{
   align-items: center;
   justify-content: center;
   flex-grow: 1;
+  max-width: 90%;
+  padding: 0rem;
   // min-height: 100vh;
 }
 
@@ -51,7 +53,7 @@ html {
 
   .c-item {
     /* height: 100vh; */
-    padding: 20px;
+    padding: 20px 0rem;
     background: #F1F1F1; /* Example background color */
     flex: 0 0 auto;
     scroll-snap-align: start;

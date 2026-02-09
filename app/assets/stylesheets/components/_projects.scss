@@ -317,3 +317,10 @@
   opacity: 1;
   border: 2px solid #007bff;
 }
+
+@media (min-width: 1400px) {
+  .main-image img {
+    max-width: 800px;
+    max-height: 600px;
+  }
+}

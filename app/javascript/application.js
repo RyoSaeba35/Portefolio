@@ -5,7 +5,7 @@ import { showProject, openModal, closeModal } from './portefolio';
 
 // Fonction pour vérifier la taille de l'écran et rediriger si nécessaire
 function checkScreenSize() {
-  const isVeryLargeScreen = window.innerWidth > 1920;
+  const isVeryLargeScreen = window.innerWidth > 1600;
   const isDesktopPath = window.location.pathname.startsWith('/desktop');
 
   if (!isVeryLargeScreen && isDesktopPath) {
@@ -15,7 +15,7 @@ function checkScreenSize() {
 
 // Charger la section par défaut pour les grands écrans
 function loadDefaultSection() {
-  const isVeryLargeScreen = window.innerWidth > 1920;
+  const isVeryLargeScreen = window.innerWidth > 1600;
   if (isVeryLargeScreen) {
     const contentFrame = document.querySelector("turbo-frame#content");
     if (contentFrame) {
@@ -26,9 +26,9 @@ function loadDefaultSection() {
 
 // Adapter les liens de la navbar en fonction de la taille de l'écran
 function setupDynamicLinks() {
-  const isVeryLargeScreen = window.innerWidth > 1920;
+  const isVeryLargeScreen = window.innerWidth > 1600;
 
-  // Désactiver Turbo Frames pour les écrans ≤ 1920px
+  // Désactiver Turbo Frames pour les écrans ≤ 1600px
   if (!isVeryLargeScreen) {
     document.querySelectorAll("[data-turbo-frame]").forEach(link => {
       link.removeAttribute("data-turbo-frame");
@@ -36,7 +36,7 @@ function setupDynamicLinks() {
     });
   }
 
-  // Gestion du défilement fluide pour les écrans ≤ 1920px
+  // Gestion du défilement fluide pour les écrans ≤ 1600px
   document.querySelectorAll(".scroll-link").forEach(link => {
     link.addEventListener("click", function(event) {
       if (!isVeryLargeScreen) {

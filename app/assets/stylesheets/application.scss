@@ -12,7 +12,7 @@
 @import "pages/index";
 
 /* app/assets/stylesheets/application.css */
-@media (min-width: 1921px) {
+@media (min-width: 1600px) {
   #about_section, #projects_section, #contact_section {
     display: none;
   }
@@ -31,4 +31,3 @@
     z-index: 1000;
   }
 }
-

@@ -1,12 +1,25 @@
+<!-- app/views/shared/_navbar.html.erb -->
 <div class="navbar-container">
   <div class="navbar">
     <ul class="section">
-      <li><%= link_to 'Qui suis-je ?', '#about_section', class: 'scroll-link' %></li>
-      <li><%= link_to 'Projets', '#projects_section', class: 'scroll-link' %></li>
-      <li><%= link_to 'Mon CV',  download_cv_path, target: "_blank" %></li>
+      <li>
+        <%= link_to 'Qui suis-je ?', '#about_section',
+            class: 'scroll-link js-dynamic-link',
+            data: { section: "about" } %>
+      </li>
+      <li>
+        <%= link_to 'Projets', '#projects_section',
+            class: 'scroll-link js-dynamic-link',
+            data: { section: "projects" } %>
+      </li>
+      <li><%= link_to 'Mon CV', download_cv_path, target: "_blank" %></li>
     </ul>
     <ul class="section white-btn">
-      <li><%= link_to 'Contact', '#contact_section', class: 'scroll-link' %></li>
+      <li>
+        <%= link_to 'Contact', '#contact_section',
+            class: 'scroll-link js-dynamic-link',
+            data: { section: "contact" } %>
+      </li>
     </ul>
   </div>
 </div>

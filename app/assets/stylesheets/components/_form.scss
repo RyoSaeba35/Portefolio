@@ -29,6 +29,13 @@
   border: none;
 }
 
+@media (min-width: 842px) {
+  .form-group textarea {
+    width: 100%;
+    height: 360px;
+  }
+}
+
 .form-group textarea:focus {
   background-color: white;
 }

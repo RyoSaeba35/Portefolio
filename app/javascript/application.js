@@ -1,5 +1,6 @@
 // app/javascript/application.js
 import "@hotwired/turbo-rails"
+console.log("Turbo chargé :", Turbo); // Vérifie que Turbo est disponible
 import "controllers"
 import { showProject, openModal, closeModal } from './portefolio';
 

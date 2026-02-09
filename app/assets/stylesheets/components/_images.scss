@@ -1,7 +1,9 @@
 .avatar {
-  width: 7.5rem;    /* 120px ÷ 16px = 7.5rem */
-  height: 7.5rem;   /* 120px ÷ 16px = 7.5rem */
+  width: 15vw;   /* Adjust this value as needed (e.g., 15vw for a larger avatar, 10vw for a smaller one) */
+  height: 15vw;  /* Same as width to keep it round */
   border-radius: 50%;
+  max-width: 120px; /* Optional: Set a max-width to prevent it from becoming too large on very wide screens */
+  max-height: 120px; /* Optional: Set a max-height to maintain aspect ratio */
 }
 
 .photo {

@@ -8,6 +8,12 @@
   justify-content: space-between;
 }
 
+#projects_section .top-project .left-presentation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 #projects_section .top-project .right-presentation {
   display: flex;
   flex-direction: column;

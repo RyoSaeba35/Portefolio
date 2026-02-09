@@ -22,12 +22,7 @@
 
   <body>
     <%= render 'shared/navbar' %>
-    <turbo-frame id="content">
-      <%= yield %>
-      <% if controller_name == "pages" && action_name == "home" %>
-        <%= render 'shared/about_section' %>
-      <% end %>
-    </turbo-frame>
+    <%= yield %>
     <%= render 'shared/footer' %>
     <%= render 'shared/mini_navbar' %>
     <style>

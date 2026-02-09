@@ -11,23 +11,3 @@
 @import "components/index";
 @import "pages/index";
 
-/* app/assets/stylesheets/application.css */
-@media (min-width: 1600px) {
-  #about_section, #projects_section, #contact_section {
-    display: none;
-  }
-
-  turbo-frame#content {
-    width: 80%;
-    margin: 2rem auto;
-    padding: 2rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .navbar-container {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-  }
-}

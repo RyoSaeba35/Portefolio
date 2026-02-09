@@ -17,9 +17,4 @@ Rails.application.routes.draw do
   resources :contacts, only: [ :create ]
   get '/download_cv', to: 'documents#download_cv'
 
-  namespace :desktop do
-    get 'about', to: 'pages#about'
-    get 'projects', to: 'pages#projects'
-    get 'contact', to: 'pages#contact'
-  end
 end

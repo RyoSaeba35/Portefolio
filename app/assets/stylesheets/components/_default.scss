@@ -15,7 +15,6 @@ p {
 
 body, html {
   overflow-x: hidden; /* To prevent horizontal scrolling */
-  // overflow-y: auto; /* Ensure vertical scrolling is enabled */
 }
 
 a {
@@ -24,29 +23,30 @@ a {
 }
 
 h2 {
-  font-size: 72px;
+  font-size: 4.5rem; /* 72px ÷ 16px = 4.5rem */
   font-weight: medium;
-  margin: 0px;
+  margin: 0;
 }
 
 h3 {
-  font-size: 40px;
-  margin: 0px;
+  font-size: 2.5rem; /* 40px ÷ 16px = 2.5rem */
+  margin: 0;
 }
 
 h4 {
-  margin: 0px;
+  margin: 0;
   align-content: center;
 }
 
 h5 {
-  margin: 0px;
+  margin: 0;
 }
 
 h6 {
-  font-size: 48px;
-  margin: 0px;
+  font-size: 3rem; /* 48px ÷ 16px = 3rem */
+  margin: 0;
 }
+
 p {
-  font-size: 16px;
+  font-size: 1rem; /* 16px ÷ 16px = 1rem */
 }

@@ -1,16 +1,22 @@
+@media (min-width: 1400px) {
+  #about_section .main-presentation {
+    padding-top: clamp(1rem, 1.5vw, 2rem);;
+  }
+
+}
+
 @media (min-width: 842px) {
   #about_section {
     display: flex;
     justify-content: center;
+    justify-items: center;
     width: 100%;
     min-height: 100vh;
-    padding-top: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 1rem;
     background: #F1F1F1;
   }
 
   #about_section .center-section {
-    max-width:1064px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,16 +43,19 @@
 
   #about_section .left-presentation {
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     flex-wrap: wrap;
     align-content: end;
-    gap: 20px;
+    gap: clamp(1.25rem, 1.5vw, 2.5rem);
+    margin-left: 1rem;
   }
 
   .left-presentation h2 {
     font-family: Montserrat;
     font-weight: 500;
     font-style: Medium;
-    font-size: 72px;
+    font-size: 4.5rem;
     line-height: 100%;
     letter-spacing: 0%;
 
@@ -56,7 +65,7 @@
     font-family: Montserrat;
     font-weight: 400;
     font-style: Regular;
-    font-size: 40px;
+    font-size: 2.5rem;
     line-height: 100%;
     letter-spacing: 0%;
   }
@@ -65,8 +74,8 @@
     font-family: Montserrat;
     font-weight: 400;
     font-style: Regular;
-    font-size: 16px;
-    line-height: 26px;
+    font-size: 1rem;
+    line-height: 1.625rem;
     letter-spacing: 0%;
     vertical-align: middle;
 
@@ -82,22 +91,22 @@
     border-width: 1px;
     opacity: 1;
     border-radius: 1000px;
-    padding-top: 2px;
-    padding-right: 13px;
-    padding-bottom: 2px;
+    padding-top: 0.125rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.125rem;
     // padding-left: 13px;
     gap: 10px;
   }
 
   .left-presentation li {
-    padding: 8px 26px;
-    border-radius: 48px;
+    padding: 0.5rem 1.625rem;
+    border-radius: 3rem;
     background: #EDEDED;
     font-family: Montserrat;
     font-weight: 400;
     font-style: Regular;
-    font-size: 14px;
-    line-height: 26px;
+    font-size: 0.875rem;
+    line-height: 1.625rem;
     letter-spacing: 3%;
     text-align: center;
     vertical-align: middle;
@@ -105,7 +114,7 @@
   }
 
   .secondary-presentation {
-    margin-top: auto;
+    margin-top: 2.5rem;
     .bottom-secondary-presentation {
       display: flex;
       justify-content: end;
@@ -115,14 +124,14 @@
         font-family: Montserrat;
         font-weight: 400;
         font-style: Regular;
-        font-size: 14px;
-        line-height: 26px;
+        font-size: 0.875rem;
+        line-height: 1.625rem;
         letter-spacing: 9%;
         text-align: center;
         vertical-align: middle;
         text-transform: uppercase;
         width: 255px;
-        height: 35px;
+        height: 2rem;
         border-radius: 12px;
       }
     }
@@ -132,8 +141,7 @@
     display: flex;
     vertical-align: middle;
     p {
-      margin-left: 32px;
+      margin-left: 2rem;
     }
   }
 }
-

@@ -1,15 +1,4 @@
-<div id="contact_section">
-  <div class="center-section">
-    <%# <div class="top-contact">
-      <p>Merci d'avoir pris le temps de parcourir mon site jusqu'à la fin.</p>
-      <p><strong>Si</strong> vous recherchez <strong>un talent responsable</strong> et <strong>motivé</strong> à évoluer au sein de votre entreprise, <strong>je suis prêt à relever le défi.</strong></p>
-    </div> %>
-    <div class="bottom-contact">
-      <h6>Let's have a chat :)</h6>
-      <%= render 'shared/contact_form' %>
-    </div>
-  </div>
-</div>
+<%= render 'shared/contact_section' %>
 
 <style>
   @media (max-width: 842px) {
@@ -43,6 +32,10 @@
       margin-bottom: 10px;
       white-space: nowrap;
       font-size: 10vw;
+    }
+
+    .top-contact {
+      display: none;
     }
   }
 </style>

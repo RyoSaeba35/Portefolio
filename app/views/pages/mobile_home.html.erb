@@ -4,11 +4,11 @@
         <h2>Bonjour</h2>
         <h3>C'est Pierre Libran</h3>
         <div class="paragraph">
-          <p>Je suis un <strong>développeur full-stack</strong> spécialisé en <strong>Ruby on Rails</strong>.</p>
+          <p>Je suis un <strong>développeur full-stack</strong> spécialisé en Ruby on Rails.</p>
         </div>
       </div>
       <div class="right-presentation">
-        <%= image_tag "portfolio_pierre_desk_II.jpg", alt: "Photo", class: "photo" %>
+        <%= image_tag "portfolio_pierre_desk_III.png", alt: "Photo", class: "photo" %>
       </div>
       <ul>
         <li>Ruby on Rails</li>
@@ -33,7 +33,7 @@
     #about_section {
       display: flex;
       justify-content: center;
-      /* align-items: center; */
+      align-items: center;
       width: 100%;
       min-height: calc(100vh - 44px);
       margin: auto 0px;
@@ -42,34 +42,41 @@
       background: #F1F1F1;
     }
 
+    #about_section .center-section {
+      width: 100%;
+      margin: auto;
+    }
+
     #about_section .left-presentation {
       display: flex;
+      align-items: center;
+      justify-content: center;
       flex-wrap: wrap;
       align-content: end;
-      gap: 20px;
-      margin-left: 8px;
-      margin-right: 8px;
+      gap: 16px;
+      margin-left: 20px;
+      margin-right: 20px;
     }
 
     #about_section .right-presentation {
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 20px 0px;
+      margin: 20px 16px;
     }
 
     #about_section .right-presentation .photo {
-      width: 100%;
-      height: auto;
-      max-height: 250px;
-      border-radius: 20px;
+      /* width: 100%; */
+      /* height: auto; */
+      max-height: 200px;
+      /* border-radius: 20px; */
     }
 
     .left-presentation h2 {
       font-family: Montserrat;
-      font-weight: 500;
+      font-weight: bold;
       font-style: Medium;
-      font-size: 64px;
+      font-size: 48px;
       line-height: 100%;
       letter-spacing: 0%;
       margin-top: 12px;
@@ -79,7 +86,7 @@
       font-family: Montserrat;
       font-weight: 400;
       font-style: Regular;
-      font-size: 32px;
+      font-size: 24px;
       line-height: 100%;
       letter-spacing: 0%;
     }
@@ -88,7 +95,7 @@
       font-family: Montserrat;
       font-weight: 400;
       font-style: Regular;
-      font-size: 16px;
+      font-size: 14px;
       line-height: 26px;
       letter-spacing: 0%;
       vertical-align: middle;
@@ -110,16 +117,18 @@
       /* // padding-left: 13px; */
       gap: 10px;
       justify-content: center; /* Center items horizontally */
+      margin-left: 16px;
+      margin-right: 16px;
     }
 
     .center-section li {
-      padding: 8px 26px;
+      padding: 6px 20px;
       border-radius: 48px;
       background: #EDEDED;
       font-family: Montserrat;
       font-weight: 400;
       font-style: Regular;
-      font-size: 14px;
+      font-size: 12px;
       line-height: 26px;
       letter-spacing: 3%;
       text-align: center;

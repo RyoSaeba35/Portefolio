@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= content_for(:title) || "Portefolio Pierre Libran" %></title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
     <%= csrf_meta_tags %>
@@ -21,9 +21,7 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
     <%= yield %>
-    <%= render 'shared/footer' %>
     <%= render 'shared/mini_navbar' %>
     <style>
       @media (min-width: 842px) {
@@ -43,14 +41,11 @@
       // Smooth scrolling for anchor links
       document.addEventListener("DOMContentLoaded", function() {
         const links = document.querySelectorAll(".scroll-link");
-
         links.forEach(link => {
           link.addEventListener("click", function(event) {
             event.preventDefault();
-
             const targetId = this.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
-
             if (targetSection) {
               window.scrollTo({
                 top: targetSection.offsetTop,
@@ -62,14 +57,10 @@
       });
 
       // Function to show a specific project and hide others (desktop only)
-
-      // Initialize desktop-specific behavior
       document.addEventListener("DOMContentLoaded", function() {
-        const isDesktop = window.innerWidth > 842; // Adjust the breakpoint as needed
-
+        const isDesktop = window.innerWidth > 842;
         if (isDesktop) {
           function showProject(projectNumber) {
-            console.log(`Showing project ${projectNumber}`);
             document.querySelectorAll('.c-item').forEach(item => {
               item.style.display = 'none';
             });
@@ -78,11 +69,7 @@
               selectedProject.style.display = 'block';
             }
           }
-
-          // Show the first project by default on desktop
           showProject(1);
-
-          // Bind project links to showProject function (if needed)
           const projectLinks = document.querySelectorAll(".project-link");
           projectLinks.forEach(link => {
             link.addEventListener("click", function() {
@@ -93,32 +80,25 @@
         }
       });
 
-
       // Modal functionality
       function openModal(imgSrc) {
-        console.log(`Opening modal with ${imgSrc}`);
         var modal = document.getElementById("myModal");
         var modalImg = document.getElementById("img01");
         modal.style.display = "block";
         modalImg.src = imgSrc;
         document.documentElement.style.overflow = "hidden";
       }
+
       function closeModal() {
-        console.log("Closing modal");
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
         document.documentElement.style.overflow = "auto";
       }
-      document.addEventListener('DOMContentLoaded', function() {
-        console.log("DOM loaded, showing project 1");
-        showProject(1);
-      });
 
-      // change the route following if it s a wider screen
+      // Redirect logic for mobile/desktop
       document.addEventListener("DOMContentLoaded", function() {
         const isMobile = window.innerWidth <= 842;
         const currentPath = window.location.pathname;
-
         if (isMobile && !currentPath.startsWith('/mobile')) {
           window.location.href = '<%= mobile_home_path %>';
         }
@@ -127,7 +107,6 @@
       window.addEventListener('resize', function() {
         const isMobile = window.innerWidth <= 842;
         const currentPath = window.location.pathname;
-
         if (isMobile && !currentPath.startsWith('/mobile')) {
           window.location.href = '<%= mobile_home_path %>';
         }
@@ -136,16 +115,12 @@
       function checkScreenSize() {
         const isLargeScreen = window.innerWidth > 842;
         const isMobilePath = window.location.pathname.startsWith('/mobile');
-
         if (isLargeScreen && isMobilePath) {
           window.location.href = '<%= root_path %>';
         }
       }
 
-      // Check screen size when the page loads
       document.addEventListener("DOMContentLoaded", checkScreenSize);
-
-      // Check screen size when the window is resized
       window.addEventListener('resize', checkScreenSize);
 
       // Toggle functionality
@@ -155,21 +130,19 @@
           const icon = this.querySelector('i');
           if (target.classList.contains('toggle-target')) {
             if (target.style.display === 'none' || target.style.display === '') {
-              target.style.display = 'block'; // Show the target
-              icon.classList.replace('fa-chevron-right', 'fa-chevron-down'); // Change icon to down
+              target.style.display = 'block';
+              icon.classList.replace('fa-chevron-right', 'fa-chevron-down');
             } else {
-              target.style.display = 'none'; // Hide the target
-              icon.classList.replace('fa-chevron-down', 'fa-chevron-right'); // Change icon to right
+              target.style.display = 'none';
+              icon.classList.replace('fa-chevron-down', 'fa-chevron-right');
             }
           }
         });
       });
 
-      // Swipe functionality for mobile only
+      // Main mobile carousel logic
       document.addEventListener("DOMContentLoaded", function() {
-        // Check if the screen width is within the mobile range
-        const isMobile = window.innerWidth <= 842; // Adjust the breakpoint as needed
-
+        const isMobile = window.innerWidth <= 842;
         if (isMobile) {
           const carouselWrapper = document.querySelector(".c-inner");
           const carouselSlides = document.querySelectorAll(".c-item");
@@ -178,12 +151,19 @@
           let startX = 0;
           let isDragging = false;
 
-          // Function to update carousel position
           function updateCarousel() {
             carouselWrapper.style.transform = `translateX(-${currentIndex * 100}%)`;
+
+            // Close all toggle targets when carousel slide changes
+            document.querySelectorAll('.toggle-target').forEach(target => {
+              target.style.display = 'none';
+            });
+            // Reset all toggle icons to chevron-right
+            document.querySelectorAll('.toggle-trigger i').forEach(icon => {
+              icon.classList.replace('fa-chevron-down', 'fa-chevron-right');
+            });
           }
 
-          // Handle project link clicks
           projectLinks.forEach(link => {
             link.addEventListener("click", function() {
               const projectNumber = parseInt(this.textContent) - 1;
@@ -192,7 +172,6 @@
             });
           });
 
-          // Touch event handlers for swipe
           carouselWrapper.addEventListener("touchstart", (e) => {
             startX = e.touches[0].clientX;
             isDragging = true;
@@ -202,8 +181,6 @@
             if (!isDragging) return;
             const x = e.touches[0].clientX;
             const diff = startX - x;
-
-            // Threshold for swipe (e.g., 50px)
             if (diff > 50 && currentIndex < carouselSlides.length - 1) {
               currentIndex++;
               updateCarousel();
@@ -219,10 +196,24 @@
             isDragging = false;
           });
 
-          // Initialize carousel
           updateCarousel();
         }
       });
+
+
+      function changeImage(src, mainImageId) {
+        const mainImage = document.getElementById(mainImageId);
+        mainImage.src = src;
+
+        // Remove active class from all thumbnails
+        const thumbnails = event.currentTarget.parentNode.querySelectorAll('.thumbnail');
+        thumbnails.forEach(thumb => {
+          thumb.classList.remove('active');
+        });
+
+        // Add active class to the clicked thumbnail
+        event.currentTarget.classList.add('active');
+      }
     </script>
   </body>
 </html>

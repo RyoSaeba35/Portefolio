@@ -3,25 +3,22 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: 40px;
-  margin: 20px 0px 0px 0px;
+  height: 2.5rem;
+  margin: 0rem;
+  // margin: 1.25rem 0rem 0rem 0rem;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 8px;
-  width:1064px;
-  height: 40px;
-}
-
-.footer {
-  display:flex;
+  padding: 0.5rem;
+  width: 66.5rem; /* 1064px ÷ 16px = 66.5rem */
+  height: 2.5rem;
   flex-direction: row;
-  gap: 32px;
-  margin: 0;
-  }
+  gap: 2rem;
+  margin: 0rem;
+}
 
 .footer li a {
   color: white;

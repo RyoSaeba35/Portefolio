@@ -22,7 +22,7 @@
                   </h5>
               </div>
               <div>
-                <%= image_tag "Projet1.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet1.1.png')}')" %>
+                <%= image_tag "FlashcardWars_1.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
               </div>
               <div>
               <div>
@@ -65,11 +65,34 @@
                     <div class="grey-frame">Testing</div>
                   </li>
                 </ul>
+                <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Technologies utilisées</p>
+                <ul class="hidden toggle-target technologies-used">
+                  <li>Ruby on Rails</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>JavaScript</li>
+                  <li>PostgreSQL</li>
+                  <li>Figma</li>
+                </ul>
                 <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-                <%= image_tag "Projet1.2.png", alt: "Photo", class: "image0 toggle-target" %>
-                <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
+                <div class="image-gallery toggle-target">
+                  <div class="main-image">
+                    <%= image_tag "FlashcardWars_1.3.jpg", alt: "Photo", class: "image0", id: "mainImage1" %>
+                  </div>
+                  <div class="center-thumbnails">
+                    <div class="thumbnails">
+                      <%= image_tag "FlashcardWars_1.3.jpg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src, 'mainImage1')" %>
+                      <%= image_tag "FlashcardWars_1.4.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage1')" %>
+                      <%= image_tag "FlashcardWars_1.5.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage1')" %>
+                      <%= image_tag "FlashcardWars_1.6.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage1')" %>
+                      <%= image_tag "FlashcardWars_1.7.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage1')" %>
+                      <%= image_tag "FlashcardWars_1.8.jpg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage1')" %>
+                    </div>
+                  </div>
+                </div>
+                <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
                 <%= link_to "https://github.com/RyoSaeba35/Flashcards-Wars-version-originale", target: "_blank", class:"hidden toggle-target" do %>
-                  <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
+                  <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
                 <% end %>
             </div>
           </div>
@@ -87,81 +110,6 @@
             </div>
             <div class="top-project">
               <div class="d-flex">
-          <h5>
-            <label class="switch">
-              <input type="checkbox">
-              <span class="slider round"></span>
-            </label>
-            <strong>EMOJILAND</strong>
-          </h5>
-              </div>
-              <div>
-          <%= image_tag "Projet2.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet2.1.png')}')" %>
-              </div>
-              <div>
-          <div>
-            <p>Emoji Land est un projet développé en équipe de 4 : <strong>une marketplace</strong> permettant aux créateurs de vendre leurs émojis uniques et aux utilisateurs d’en acheter pour enrichir leur communication digitale.</p><br>
-            <p>J’y ai contribué en tant que développeur, en travaillant sur <strong>l’architecture du site, l’optimisation de l’expérience utilisateur et le back-end.</strong></p>
-          </div>
-              </div>
-            </div>
-            <div class="middle-project">
-              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
-              <ul class="progress-bar toggle-target">
-          <li class="progress-item">
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
-            </div>
-            <div class="grey-frame">Recherche</div>
-          </li>
-          <li class="progress-item">
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
-            </div>
-            <div class="grey-frame">Wireframing</div>
-          </li>
-          <li class="progress-item">
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
-            </div>
-            <div class="grey-frame">Design</div>
-          </li>
-          <li class="progress-item">
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
-            </div>
-            <div class="grey-frame">Development</div>
-          </li>
-          <li class="progress-item">
-            <div class="outer-circle">
-              <div class="inner-circle"></div>
-            </div>
-            <div class="grey-frame">Testing</div>
-          </li>
-              </ul>
-              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-              <%= image_tag "Projet2.2.png", alt: "Photo", class: "image0 toggle-target" %>
-              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
-              <%= link_to "https://github.com/ClarisseFab/-emojiland", target: "_blank", class:"hidden toggle-target" do %>
-                <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
-              <% end %>
-
-            </div>
-          </div>
-        </div>
-
-        <div id="project_3" class="c-item">
-          <div>
-            <div>
-              <h4>
-                <strong>Projet</strong>
-                <span class="project-link" onclick="showProject(1)">1</span>
-                <span class="project-link" onclick="showProject(2)">2</span>
-                <strong>3</strong>
-              </h4>
-            </div>
-            <div class="top-project">
-              <div class="d-flex">
                 <h5>
                   <label class="switch">
                     <input type="checkbox">
@@ -171,7 +119,7 @@
                 </h5>
               </div>
               <div>
-                <%= image_tag "Projet3.1.png", alt: "Photo", class: "image", onclick: "openModal('#{asset_path('Projet3.1.png')}')" %>
+                <%= image_tag "TheLittleFirefly_3.1.png", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
               </div>
               <div>
                 <div>
@@ -214,12 +162,140 @@
                   <div class="grey-frame">Testing</div>
                 </li>
               </ul>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Technologies utilisées</p>
+              <ul class="hidden toggle-target technologies-used">
+                <li>Ruby on Rails</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PostgreSQL</li>
+              </ul>
               <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
-              <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
-              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p>
-              <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
-                <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p>
-              <% end %>
+              <div class="image-gallery toggle-target">
+                <div class="main-image">
+                  <%= image_tag "TheLittleFirefly_3.3.jpeg", alt: "Photo", class: "image0", id: "mainImage3" %>
+                </div>
+                <div class="center-thumbnails">
+                  <div class="thumbnails">
+                    <%= image_tag "TheLittleFirefly_3.3.jpeg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "TheLittleFirefly_3.4.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "TheLittleFirefly_3.5.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "TheLittleFirefly_3.6.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "TheLittleFirefly_3.7.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                    <%= image_tag "TheLittleFirefly_3.8.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage3')" %>
+                  </div>
+                </div>
+              </div>
+              <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p> %>
+              <%# <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
+                <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
+              <%# <% end %>
+            </div>
+          </div>
+        </div>
+
+        <div id="project_3" class="c-item">
+          <div>
+            <div>
+              <h4>
+                <strong>Projet</strong>
+                <span class="project-link" onclick="showProject(1)">1</span>
+                <span class="project-link" onclick="showProject(2)">2</span>
+                <strong>3</strong>
+              </h4>
+            </div>
+            <div class="top-project">
+              <div class="d-flex">
+                <h5>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label>
+                  <strong><a href="https://www.vulcainvpn.com/" target="_blank">Vulcain VPN</a></strong>
+              </div>
+              <div>
+                <%= image_tag "VulcainVPN_1.1.jpeg", alt: "Photo", class: "image", onclick: "openModal(this.src)" %>
+              </div>
+              <div>
+                <div>
+                  <p>Vulcain VPN est un service VPN simple et efficace, basé sur WireGuard, pour une navigation sécurisée et anonyme. J’ai conçu la plateforme complète : abonnement en ligne, génération de configurations (QR code ou fichier), et mise en place du serveur. Les utilisateurs se connectent en quelques clics via l’application WireGuard.</p><br>
+                  <p>Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous.</p><br>
+                </div>
+              </div>
+            </div>
+            <div class="middle-project">
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Où suis-je dans le Working process?</p>
+              <ul class="progress-bar toggle-target">
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Recherche</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Wireframing</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Design</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Development</div>
+                </li>
+                <li class="progress-item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <div class="grey-frame">Testing</div>
+                </li>
+              </ul>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Technologies utilisées</p>
+              <ul class="hidden toggle-target technologies-used">
+                <li>Ruby on Rails</li>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>PostgreSQL</li>
+                <li>Stripe</li>
+                <li>Wasabi</li>
+                <li>Heroku</li>
+                <li>Railway</li>
+                <li>Ruby</li>
+                <li>WireGuard</li>
+                <li>Devise</li>
+                <li>Sidekiq</li>
+                <li>Redis</li>
+                <li>Net::SSH, Net::SCP, Net::SFTP</li>
+              </ul>
+              <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> En savoir plus?</p>
+              <div class="image-gallery toggle-target">
+                <div class="main-image">
+                  <%= image_tag "VulcainVPN_1.2.jpeg", alt: "Photo", class: "image0", id: "mainImage4" %>
+                </div>
+                <div class="center-thumbnails">
+                  <div class="thumbnails">
+                    <%= image_tag "VulcainVPN_1.2.jpeg", alt: "Thumbnail", class: "thumbnail active", onclick: "changeImage(this.src, 'mainImage4')" %>
+                    <%= image_tag "VulcainVPN_1.3.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage4')" %>
+                    <%= image_tag "VulcainVPN_1.4.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage4')" %>
+                    <%= image_tag "VulcainVPN_1.5.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage4')" %>
+                    <%= image_tag "VulcainVPN_1.6.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage4')" %>
+                    <%= image_tag "VulcainVPN_1.7.jpeg", alt: "Thumbnail", class: "thumbnail", onclick: "changeImage(this.src, 'mainImage4')" %>
+                  </div>
+                </div>
+              </div>
+              <%# <%= image_tag "Projet3.2.png", alt: "Photo", class: "image0 toggle-target" %>
+              <%# <p class="toggle-trigger"><i class="fa-solid fa-chevron-right"></i> Lire les codes?</p> %>
+              <%# <%= link_to "https://github.com/RyoSaeba35/project-2024", target: "_blank", class:"hidden toggle-target" do %>
+                <%# <p class="white-btn large-btn">VOIR LE CODE on GITHUB</p> %>
+              <%# <% end %>
             </div>
           </div>
         </div>
@@ -246,7 +322,7 @@
       overflow: hidden;
       position: relative;
       touch-action: pan-y; /* Allow vertical scrolling but capture horizontal swipes */
-}
+    }
 
     .c-inner {
       display: flex;
@@ -262,10 +338,64 @@
       flex-shrink: 0;
     }
 
-    .top-project, .middle-project, .bottom-project {
+    .image-gallery {
+      display: none;
+      margin-top: 10px;
+      margin-left: -32px;
+    }
+
+    .image-gallery.block {
+      display: block;
+    }
+
+    .main-image img {
+      max-width: 100vw;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .center-thumbnails {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0px;
+    }
+
+    .thumbnails {
+      display: flex;
+      flex-wrap: wrap; /* Allow thumbnails to wrap to the next line if needed */
+      gap: 8px;
+      margin-top: 10px;
+      padding: auto;
+      justify-content: flex-start; /* Align thumbnails to the left */
+      max-width: 100%;
+      overflow: hidden; /* Prevent any overflow issues */
+    }
+
+    .thumbnail {
+      width: 50px; /* Smaller width */
+      height: 50px; /* Smaller height */
+      object-fit: cover;
+      cursor: pointer;
+      border-radius: 4px;
+      opacity: 0.7;
+      transition: opacity 0.2s, border 0.2s;
+      border: 2px solid transparent;
+    }
+
+    .thumbnail:hover {
+      opacity: 0.9;
+    }
+
+    .thumbnail.active {
+      opacity: 1;
+      border: 2px solid #007bff;
+    }
+
+    .top-project, .bottom-project {
       display: flex;
       flex-direction: column;
       /* align-items: left; */
+      margin-left: 16px;
+      margin-right: 16px;
     }
 
     .left-presentation, .right-presentation {
@@ -278,7 +408,7 @@
     }
 
     .image0 {
-      width: 100%;
+      max-width:85% !important;
     }
 
     .progress-bar {
@@ -291,6 +421,22 @@
     }
 
     .progress-bar li {
+      justify-content: left; /* Align items to the left */
+      width: 100%; /* Full width for each item */
+      margin-left: 20px;
+    }
+
+    .technologies-used {
+      list-style: square !important;
+      padding: 0px; /* Remove default padding */
+      display: flex;
+      flex-direction: column;
+      gap: 20px !important; /* Space between grid items */
+      width: 100%;
+    }
+
+    .technologies-used li {
+      list-style: square;
       justify-content: left; /* Align items to the left */
       width: 100%; /* Full width for each item */
       margin-left: 20px;
@@ -324,20 +470,20 @@
         font-size: 24px;
         line-height: 100%;
         letter-spacing: 0%;
-        margin: 20px 8px;
+        margin: 20px 0px;
       }
     }
 
-    .top-project p {
+    /* .top-project p {
       margin-left: 8px;
       margin-right: 8px;
-    }
+    } */
 
     .middle-project {
       margin: 0px;
       margin-top: 20px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
       display: flex;
       flex-direction: column;    /* Stack the <p> and <ul> vertically */
       align-items: left;    /* Align items to the left */
@@ -354,9 +500,10 @@
       font-style: Regular;
       font-size: 20px;
       line-height: 26px;
-      letter-spacing: 0%;
+      /* letter-spacing: 0%; */
       text-align: left;
       margin: 8px 8px;
+      padding-right: 16px;
     }
 
     /* .progress-bar {
@@ -381,8 +528,8 @@
         background: #0E98A9;
       }
       .project-link:hover {
-        color: #0E98A9;
-        font-weight: bold;
+        color: black;
+        font-weight: 400 !important;
       }
     }
 
@@ -392,8 +539,8 @@
         background: #F98707;
       }
       .project-link:hover {
-        color: #F98707;
-        font-weight: bold;
+        color: black;
+        font-weight: 400 !important;
       }
     }
 
@@ -409,8 +556,25 @@
         color: #d35400;
       }
       .project-link:hover {
-        color: #3B9F22;
+        color: black;
+        font-weight: 400 !important;
+      }
+    }
+
+    #project_4 {
+      .grey-frame {
+        background: #432923;
+      }
+      a {
+        color : #432923 ;
         font-weight: bold;
+      }
+      a:hover {
+        color: #ff6e08;
+      }
+      .project-link:hover {
+        color: #432923;
+        font-weight: 400 !important;
       }
     }
 
@@ -434,8 +598,8 @@
     .c-item h4 {
       display: flex;
       gap: 24px;
-      margin-left: 8px;
-      margin-right: 8px;
+      margin-left: 16px;
+      margin-right: 16px;
       font-size: 24px;
       span {
         margin-top: auto;
@@ -497,7 +661,7 @@
       border-radius: 50%;
     }
 
-    .progress-bar, .image0, .hidden {
+    .progress-bar, .toggle-target, .hidden {
       display: none; /* Initially hide the toggle targets */
     }
 

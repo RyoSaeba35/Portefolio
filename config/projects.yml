@@ -1,6 +1,6 @@
 - id: 1
   title: "Crypto Analyser"
-  subtitle: "SITE WEB"
+  subtitle: "Site WEB"
   link: "https://crypto-analyzer-production-d4d2.up.railway.app/"
   link_label: "Crypto Analyser"
   color: "#F2C94C"
@@ -14,10 +14,10 @@
     - "Railway"
   cover_image: "CryptoAnalyser_cover.png"
   gallery:
-    - "CryptoAnalyser_1"
-    - "CryptoAnalyser_2"
-    - "CryptoAnalyser_3"
-    - "CryptoAnalyser_4"
+    - "CryptoAnalyser_1.png"
+    - "CryptoAnalyser_2.png"
+    - "CryptoAnalyser_3.png"
+    - "CryptoAnalyser_4.png"
 
 - id: 2
   title: "Kotoba Ciphers"
@@ -44,7 +44,7 @@
 
 - id: 3
   title: "The Little Firefly"
-  subtitle: "SITE WEB"
+  subtitle: "Site WEB"
   link: "https://www.thelittlefirefly.co.uk/en"
   link_label: "The Little Firefly"
   color: "#F98707"
@@ -105,7 +105,7 @@
 
 - id: 5
   title: "Flashcard Wars"
-  subtitle: null
+  subtitle: Jeu Mobile
   link: null
   link_label: null
   color: "#0E98A9"

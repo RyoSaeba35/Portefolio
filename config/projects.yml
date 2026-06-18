@@ -3,6 +3,7 @@
   subtitle: "Site WEB"
   link: "https://crypto-analyzer-production-d4d2.up.railway.app/"
   link_label: "Crypto Analyser"
+  github: "https://github.com/RyoSaeba35/crypto-analyzer"
   color: "#F2C94C"
   description:
     - "Crypto Analyser est une application web développée avec <strong>Next.js, TypeScript et React</strong>, permettant de suivre et d'analyser les cryptomonnaies en temps réel."
@@ -24,6 +25,7 @@
   subtitle: "Jeu Mobile"
   link: "https://play.google.com/store/apps/details?id=io.github.ryosaeba35.kotobaciphers"
   link_label: "Kotoba Ciphers"
+  github: "https://github.com/RyoSaeba35/kotoba-cipher-api"
   color: "#E65100"
   description:
     - "Kotoba Ciphers est une application mobile développée pour Android avec <strong>Flutter</strong>, proposant des énigmes et puzzles à résoudre. J'ai également conçu le <strong>backend en Ruby on Rails</strong>, qui génère les puzzles et les transmet à l'application via une API dédiée."
@@ -47,6 +49,7 @@
   subtitle: "Site WEB"
   link: "https://www.thelittlefirefly.co.uk/en"
   link_label: "The Little Firefly"
+  github: null
   color: "#F98707"
   description:
     - "The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales."
@@ -71,6 +74,7 @@
   subtitle: null
   link: "https://www.vulcainvpn.com/"
   link_label: "Vulcain VPN"
+  github: null
   color: "#3B9F22"
   description:
     - "Vulcain VPN est un service VPN simple et efficace, basé sur Sing-Box et WireGuard, conçu pour une navigation sécurisée et anonyme. J'ai développé l'ensemble de la plateforme : système d'abonnement en ligne, API de génération et d'envoi automatisé des configurations de connexion, ainsi que la mise en place et l'administration du serveur. Les utilisateurs se connectent en quelques clics grâce à une application mobile développée avec Flutter."
@@ -108,6 +112,7 @@
   subtitle: Jeu Mobile
   link: null
   link_label: null
+  github: null
   color: "#0E98A9"
   completed_stages: ["Recherche", "Wireframing", "Development", "Testing"]
   gallery_label: "Gallery"

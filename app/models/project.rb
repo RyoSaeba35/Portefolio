@@ -7,7 +7,7 @@ class Project
 
   STAGES = %w[Recherche Wireframing Design Development Testing].freeze
 
-  attr_accessor :id, :title, :subtitle, :link, :link_label, :color,
+  attr_accessor :id, :title, :subtitle, :link, :link_label, :github,:color,
                 :description, :technologies, :cover_image, :gallery
   attr_writer :completed_stages, :gallery_label
 

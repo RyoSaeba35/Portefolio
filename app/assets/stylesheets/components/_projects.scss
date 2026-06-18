@@ -76,6 +76,31 @@
   }
 }
 
+.github-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #24292e;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  margin: 20px 0px;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  line-height: 1;
+}
+
+.github-link:hover {
+  background: #eaeef2;
+  border-color: #afb8c1;
+}
+
+.github-link i {
+  font-size: 1rem;
+}
+
 .image {
   max-width: 90%;
   border-radius: 8px;
@@ -350,7 +375,7 @@
   }
 
   .top-project .left-presentation {
-    order: 2;
+    order: 3;
     justify-content: flex-start;
   }
 
@@ -361,8 +386,14 @@
   }
 
   .top-project p {
-    order: 3;
+    order: 4;
     margin: 8px 0;
+  }
+
+  .github-link {
+    order: 2;
+    margin: 0px;
+    margin-bottom: 20px;
   }
 
   .top-project .hidden {

@@ -36,11 +36,11 @@
     - "Android"
   cover_image: KotobaCiphers_cover.png # à remplacer une fois l'image dispo, ex: "KotobaCiphers_1.1.png"
   gallery:
-    - "KotobaCiphers_1"
-    - "KotobaCiphers_2"
-    - "KotobaCiphers_3"
-    - "KotobaCiphers_4"
-    - "KotobaCiphers_5"
+    - "KotobaCiphers_1.jpeg"
+    - "KotobaCiphers_2.jpeg"
+    - "KotobaCiphers_3.jpeg"
+    - "KotobaCiphers_4.jpeg"
+    - "KotobaCiphers_5.jpeg"
 
 - id: 3
   title: "The Little Firefly"

@@ -1,4 +1,109 @@
 - id: 1
+  title: "Crypto Analyser"
+  subtitle: "SITE WEB"
+  link: "https://crypto-analyzer-production-d4d2.up.railway.app/"
+  link_label: "Crypto Analyser"
+  color: "#F2C94C"
+  description:
+    - "Crypto Analyser est une application web développée avec <strong>Next.js, TypeScript et React</strong>, permettant de suivre et d'analyser les cryptomonnaies en temps réel."
+    - "Un projet axé sur la <strong>performance et la clarté de l'affichage des données</strong>, pour aider les utilisateurs à filtrer rapidement les actifs qui les intéressent."
+  technologies:
+    - "Next.js"
+    - "TypeScript"
+    - "React"
+    - "Railway"
+  cover_image: "CryptoAnalyser_cover.png"
+  gallery:
+    - "CryptoAnalyser_1"
+    - "CryptoAnalyser_2"
+    - "CryptoAnalyser_3"
+    - "CryptoAnalyser_4"
+
+- id: 2
+  title: "Kotoba Ciphers"
+  subtitle: "Jeu Mobile"
+  link: "https://play.google.com/store/apps/details?id=io.github.ryosaeba35.kotobaciphers"
+  link_label: "Kotoba Ciphers"
+  color: "#E65100"
+  description:
+    - "Kotoba Ciphers est une application mobile développée pour Android avec <strong>Flutter</strong>, proposant des énigmes et puzzles à résoudre. J'ai également conçu le <strong>backend en Ruby on Rails</strong>, qui génère les puzzles et les transmet à l'application via une API dédiée."
+    - "Un projet qui allie <strong>développement mobile et architecture API</strong>, pensé pour offrir une expérience de jeu fluide et évolutive."
+  technologies:
+    - "Flutter"
+    - "Dart"
+    - "Ruby on Rails"
+    - "API"
+    - "Android"
+  cover_image: KotobaCiphers_cover.png # à remplacer une fois l'image dispo, ex: "KotobaCiphers_1.1.png"
+  gallery:
+    - "KotobaCiphers_1"
+    - "KotobaCiphers_2"
+    - "KotobaCiphers_3"
+    - "KotobaCiphers_4"
+    - "KotobaCiphers_5"
+
+- id: 3
+  title: "The Little Firefly"
+  subtitle: "SITE WEB"
+  link: "https://www.thelittlefirefly.co.uk/en"
+  link_label: "The Little Firefly"
+  color: "#F98707"
+  description:
+    - "The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales."
+    - "Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong>"
+  technologies:
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+  cover_image: "TheLittleFirefly_3.1.png"
+  gallery:
+    - "TheLittleFirefly_3.3.jpeg"
+    - "TheLittleFirefly_3.4.jpeg"
+    - "TheLittleFirefly_3.5.jpeg"
+    - "TheLittleFirefly_3.6.jpeg"
+    - "TheLittleFirefly_3.7.jpeg"
+    - "TheLittleFirefly_3.8.jpeg"
+
+- id: 4
+  title: "Vulcain VPN"
+  subtitle: null
+  link: "https://www.vulcainvpn.com/"
+  link_label: "Vulcain VPN"
+  color: "#3B9F22"
+  description:
+    - "Vulcain VPN est un service VPN simple et efficace, basé sur Sing-Box et WireGuard, conçu pour une navigation sécurisée et anonyme. J'ai développé l'ensemble de la plateforme : système d'abonnement en ligne, API de génération et d'envoi automatisé des configurations de connexion, ainsi que la mise en place et l'administration du serveur. Les utilisateurs se connectent en quelques clics grâce à une application mobile développée avec Flutter."
+    - "Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous."
+  technologies:
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+    - "Figma"
+    - "Stripe"
+    - "Wasabi"
+    - "Heroku"
+    - "Railway"
+    - "Ruby"
+    - "WireGuard"
+    - "Devise"
+    - "Sidekiq"
+    - "Redis"
+    - "Net::SSH, Net::SCP, Net::SFTP"
+  cover_image: "VulcainVPN_cover.jpeg"
+  gallery:
+    - "VulcainVPN_1.2.jpeg"
+    - "VulcainVPN_1.3.jpeg"
+    - "VulcainVPN_1.4.jpeg"
+    - "VulcainVPN_1.6.jpeg"
+    - "VulcainVPN_1.7.jpeg"
+    - "VulcainVPN_9.jpeg"
+    - "VulcainVPN_10.jpeg"
+    - "VulcainVPN_11.jpeg"
+
+- id: 5
   title: "Flashcard Wars"
   subtitle: null
   link: null
@@ -24,68 +129,3 @@
     - "FlashcardWars_1.6.jpg"
     - "FlashcardWars_1.7.jpg"
     - "FlashcardWars_1.8.jpg"
-
-- id: 2
-  title: "The Little Firefly"
-  subtitle: "SITE WEB"
-  link: "https://www.thelittlefirefly.co.uk/en"
-  link_label: "The Little Firefly"
-  color: "#F98707"
-  description:
-    - "The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales."
-    - "Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong>"
-  technologies:
-    - "Ruby on Rails"
-    - "HTML"
-    - "CSS"
-    - "JavaScript"
-    - "PostgreSQL"
-  cover_image: "TheLittleFirefly_3.1.png"
-  gallery:
-    - "TheLittleFirefly_3.3.jpeg"
-    - "TheLittleFirefly_3.4.jpeg"
-    - "TheLittleFirefly_3.5.jpeg"
-    - "TheLittleFirefly_3.6.jpeg"
-    - "TheLittleFirefly_3.7.jpeg"
-    - "TheLittleFirefly_3.8.jpeg"
-
-- id: 3
-  title: "Vulcain VPN"
-  subtitle: null
-  link: "https://www.vulcainvpn.com/"
-  link_label: "Vulcain VPN"
-  color: "#3B9F22"
-  description:
-    - "Vulcain VPN est un service VPN simple et efficace, basé sur WireGuard, pour une navigation sécurisée et anonyme. J’ai conçu la plateforme complète : abonnement en ligne, génération de configurations (QR code ou fichier), et mise en place du serveur. Les utilisateurs se connectent en quelques clics via l’application WireGuard."
-    - "Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous."
-  technologies:
-    - "Ruby on Rails"
-    - "HTML"
-    - "CSS"
-    - "JavaScript"
-    - "PostgreSQL"
-    - "Figma"
-    - "Stripe"
-    - "Wasabi"
-    - "Heroku"
-    - "Railway"
-    - "Ruby"
-    - "WireGuard"
-    - "Devise"
-    - "Sidekiq"
-    - "Redis"
-    - "Net::SSH, Net::SCP, Net::SFTP"
-  cover_image: "VulcainVPN_1.1.jpeg"
-  gallery:
-    - "VulcainVPN_1.2.jpeg"
-    - "VulcainVPN_1.3.jpeg"
-    - "VulcainVPN_1.4.jpeg"
-    - "VulcainVPN_1.5.jpeg"
-    - "VulcainVPN_1.6.jpeg"
-    - "VulcainVPN_1.7.jpeg"
-    - "VulcainVPN_1.8.jpeg"
-    - "VulcainVPN_1.9.jpeg"
-
-# To add a project 4, just append another entry here — no view or CSS
-# changes needed. Pick any accent color; #project_4 styling already
-# falls out of the --accent custom property used throughout projects.scss.

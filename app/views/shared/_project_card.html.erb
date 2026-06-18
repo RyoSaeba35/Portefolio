@@ -16,10 +16,16 @@
 
   <div class="top-project">
     <div class="left-presentation">
-      <%= image_tag project.cover_image,
-            alt: "Aperçu du projet #{project.title}",
-            class: "image",
-            data: { action: "open-modal" } %>
+      <% if project.cover_image.present? %>
+        <%= image_tag project.cover_image,
+              alt: "Aperçu du projet #{project.title}",
+              class: "image",
+              data: { action: "open-modal" } %>
+      <% else %>
+        <div class="image image-placeholder">
+          <span><%= project.title %></span>
+        </div>
+      <% end %>
     </div>
     <div class="right-presentation">
       <h5>
@@ -67,24 +73,28 @@
 
     <details>
       <summary><strong><%= project.gallery_label %></strong></summary>
-      <div class="image-gallery">
-        <div class="main-image">
-          <%= image_tag project.gallery.first,
-                alt: "Capture d’écran du projet #{project.title}",
-                class: "image0",
-                id: "mainImage#{project.id}" %>
-        </div>
-        <div class="center-thumbnails">
-          <div class="thumbnails">
-            <% project.gallery.each_with_index do |image, index| %>
-              <%= image_tag image,
-                    alt: "Vignette #{index + 1} du projet #{project.title}",
-                    class: "thumbnail#{' active' if index.zero?}",
-                    data: { action: "change-image", target: "mainImage#{project.id}" } %>
-            <% end %>
+      <% if project.gallery.present? %>
+        <div class="image-gallery">
+          <div class="main-image">
+            <%= image_tag project.gallery.first,
+                  alt: "Capture d’écran du projet #{project.title}",
+                  class: "image0",
+                  id: "mainImage#{project.id}" %>
+          </div>
+          <div class="center-thumbnails">
+            <div class="thumbnails">
+              <% project.gallery.each_with_index do |image, index| %>
+                <%= image_tag image,
+                      alt: "Vignette #{index + 1} du projet #{project.title}",
+                      class: "thumbnail#{' active' if index.zero?}",
+                      data: { action: "change-image", target: "mainImage#{project.id}" } %>
+              <% end %>
+            </div>
           </div>
         </div>
-      </div>
+      <% else %>
+        <p class="gallery-empty">Galerie à venir.</p>
+      <% end %>
     </details>
   </div>
 </div>

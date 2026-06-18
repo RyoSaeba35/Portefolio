@@ -3,5 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 // app/javascript/application.js
 
-import { showProject, openModal, closeModal } from './portefolio';
+import { showProject, openModal, closeModal } from 'portefolio';
 

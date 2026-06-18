@@ -353,7 +353,7 @@
 
 @media (max-width: 842px) {
   #projects_section {
-    min-height: calc(100vh + 44px);
+    min-height: calc(100vh - 44px);
     padding-bottom: 44px;
   }
 

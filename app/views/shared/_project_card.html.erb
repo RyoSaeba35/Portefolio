@@ -1,0 +1,90 @@
+<%# One card renders each project. Desktop vs mobile differences live in
+    projects.scss media queries, not in duplicated markup. %>
+<div id="project_<%= project.id %>" class="c-item" style="--accent: <%= project.color %>;">
+  <div class="project-header">
+    <h4>
+      <strong>Projet</strong>
+      <% all_projects.each do |p| %>
+        <% if p.id == project.id %>
+          <strong><%= p.id %></strong>
+        <% else %>
+          <span class="project-link" data-index="<%= p.id - 1 %>"><%= p.id %></span>
+        <% end %>
+      <% end %>
+    </h4>
+  </div>
+
+  <div class="top-project">
+    <div class="left-presentation">
+      <%= image_tag project.cover_image,
+            alt: "Aperçu du projet #{project.title}",
+            class: "image",
+            data: { action: "open-modal" } %>
+    </div>
+    <div class="right-presentation">
+      <h5>
+        <label class="switch">
+          <input type="checkbox">
+          <span class="slider round"></span>
+        </label>
+        <% if project.link.present? %>
+          <% if project.subtitle.present? %><%= project.subtitle %> - <% end %>
+          <%= link_to (project.link_label || project.title), project.link, target: "_blank", rel: "noopener" %>
+        <% else %>
+          <strong><%= project.title %></strong>
+        <% end %>
+      </h5>
+      <% project.description_paragraphs.each do |paragraph| %>
+        <p><%= paragraph %></p>
+        <br class="hidden">
+      <% end %>
+    </div>
+  </div>
+
+  <div class="middle-project">
+    <details>
+      <summary><strong>Où suis-je</strong> dans le Working process?</summary>
+      <ul class="progress-bar">
+        <% Project::STAGES.each do |stage| %>
+          <li class="progress-item">
+            <div class="grey-frame "><%= stage %></div>
+            <div class="outer-circle <%= "filled" if project.stage_completed?(stage) %>">
+              <div class="inner-circle"></div>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Technologies utilisées</strong></summary>
+      <ul class="technologies-used">
+        <% project.technologies.each do |tech| %>
+          <li><%= tech %></li>
+        <% end %>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong><%= project.gallery_label %></strong></summary>
+      <div class="image-gallery">
+        <div class="main-image">
+          <%= image_tag project.gallery.first,
+                alt: "Capture d’écran du projet #{project.title}",
+                class: "image0",
+                id: "mainImage#{project.id}" %>
+        </div>
+        <div class="center-thumbnails">
+          <div class="thumbnails">
+            <% project.gallery.each_with_index do |image, index| %>
+              <%= image_tag image,
+                    alt: "Vignette #{index + 1} du projet #{project.title}",
+                    class: "thumbnail#{' active' if index.zero?}",
+                    data: { action: "change-image", target: "mainImage#{project.id}" } %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </details>
+  </div>
+</div>

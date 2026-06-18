@@ -1,0 +1,91 @@
+- id: 1
+  title: "Flashcard Wars"
+  subtitle: null
+  link: null
+  link_label: null
+  color: "#0E98A9"
+  completed_stages: ["Recherche", "Wireframing", "Development", "Testing"]
+  gallery_label: "Gallery"
+  description:
+    - "Flash Card Wars est <strong>une application ludique</strong> créée pour les étudiants du Wagon afin de mémoriser les leçons via des flashcards interactives et des défis entre camarades."
+    - "J’ai travaillé sur le <strong>back-end en Ruby on Rails</strong> et <strong>l’intégration front-end,</strong> ainsi que sur <strong>la logique de jeu.</strong>"
+  technologies:
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+    - "Figma"
+  cover_image: "FlashcardWars_1.1.png"
+  gallery:
+    - "FlashcardWars_1.3.jpg"
+    - "FlashcardWars_1.4.jpg"
+    - "FlashcardWars_1.5.jpg"
+    - "FlashcardWars_1.6.jpg"
+    - "FlashcardWars_1.7.jpg"
+    - "FlashcardWars_1.8.jpg"
+
+- id: 2
+  title: "The Little Firefly"
+  subtitle: "SITE WEB"
+  link: "https://www.thelittlefirefly.co.uk/en"
+  link_label: "The Little Firefly"
+  color: "#F98707"
+  description:
+    - "The Little Firefly est un site que <strong>j’ai conçu et développé</strong> pour guider celles et ceux qui rêvent de voyager ou de s’installer au Royaume-Uni. Fort de 9 années d’expérience à Londres, j’y partage conseils pratiques, bonnes adresses et astuces locales."
+    - "Un projet qui <strong>combine ma passion pour le développement web, l’expérience utilisateur et la création de contenu.</strong>"
+  technologies:
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+  cover_image: "TheLittleFirefly_3.1.png"
+  gallery:
+    - "TheLittleFirefly_3.3.jpeg"
+    - "TheLittleFirefly_3.4.jpeg"
+    - "TheLittleFirefly_3.5.jpeg"
+    - "TheLittleFirefly_3.6.jpeg"
+    - "TheLittleFirefly_3.7.jpeg"
+    - "TheLittleFirefly_3.8.jpeg"
+
+- id: 3
+  title: "Vulcain VPN"
+  subtitle: null
+  link: "https://www.vulcainvpn.com/"
+  link_label: "Vulcain VPN"
+  color: "#3B9F22"
+  description:
+    - "Vulcain VPN est un service VPN simple et efficace, basé sur WireGuard, pour une navigation sécurisée et anonyme. J’ai conçu la plateforme complète : abonnement en ligne, génération de configurations (QR code ou fichier), et mise en place du serveur. Les utilisateurs se connectent en quelques clics via l’application WireGuard."
+    - "Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous."
+  technologies:
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+    - "Figma"
+    - "Stripe"
+    - "Wasabi"
+    - "Heroku"
+    - "Railway"
+    - "Ruby"
+    - "WireGuard"
+    - "Devise"
+    - "Sidekiq"
+    - "Redis"
+    - "Net::SSH, Net::SCP, Net::SFTP"
+  cover_image: "VulcainVPN_1.1.jpeg"
+  gallery:
+    - "VulcainVPN_1.2.jpeg"
+    - "VulcainVPN_1.3.jpeg"
+    - "VulcainVPN_1.4.jpeg"
+    - "VulcainVPN_1.5.jpeg"
+    - "VulcainVPN_1.6.jpeg"
+    - "VulcainVPN_1.7.jpeg"
+    - "VulcainVPN_1.8.jpeg"
+    - "VulcainVPN_1.9.jpeg"
+
+# To add a project 4, just append another entry here — no view or CSS
+# changes needed. Pick any accent color; #project_4 styling already
+# falls out of the --accent custom property used throughout projects.scss.

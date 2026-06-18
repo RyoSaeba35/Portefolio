@@ -1,3 +1,24 @@
+body {
+  min-height: calc(100vh - 88px);
+  display: flex;
+  flex-direction: column;
+  background: #F1F1F1;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  max-width: 90%;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   padding: 0;
   margin: 0;
@@ -11,10 +32,7 @@ p {
   margin-top: 0;
   margin-bottom: 0;
   align-content: center;
-}
-
-body, html {
-  overflow-x: hidden; /* To prevent horizontal scrolling */
+  font-size: 1rem;
 }
 
 a {
@@ -22,31 +40,32 @@ a {
   align-content: center;
 }
 
-h2 {
-  font-size: 4.5rem; /* 72px ÷ 16px = 4.5rem */
-  font-weight: medium;
-  margin: 0;
+h2 { font-size: 4.5rem; font-weight: 500; margin: 0; }
+h3 { font-size: 2.5rem; margin: 0; }
+h4 { margin: 0; align-content: center; }
+h5 { margin: 0; }
+h6 { font-size: 3rem; margin: 0; }
+
+body, html {
+  overflow-x: hidden;
 }
 
-h3 {
-  font-size: 2.5rem; /* 40px ÷ 16px = 2.5rem */
-  margin: 0;
-}
+@media (max-width: 842px) {
+  .screen-hidden {
+    display: none !important;
+  }
 
-h4 {
-  margin: 0;
-  align-content: center;
-}
+  #about_section,
+  #projects_section,
+  #contact_section {
+    height: calc(100vh - 44px) !important;
+    min-height: 0 !important;
+    padding-bottom: 0 !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
 
-h5 {
-  margin: 0;
-}
-
-h6 {
-  font-size: 3rem; /* 48px ÷ 16px = 3rem */
-  margin: 0;
-}
-
-p {
-  font-size: 1rem; /* 16px ÷ 16px = 1rem */
+  .container {
+    max-width: 100%;
+  }
 }

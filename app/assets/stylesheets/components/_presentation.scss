@@ -1,8 +1,7 @@
 @media (min-width: 1400px) {
   #about_section .main-presentation {
-    padding-top: clamp(1rem, 1.5vw, 2rem);;
+    padding-top: clamp(1rem, 1.5vw, 2rem);
   }
-
 }
 
 @media (min-width: 842px) {
@@ -10,30 +9,24 @@
     display: flex;
     justify-content: center;
     justify-items: center;
+    flex-direction: column;
+    padding-bottom: 1rem;
     width: 100%;
     min-height: 100vh;
-    padding-bottom: 1rem;
     background: #F1F1F1;
   }
 
   #about_section .center-section {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
   }
 
   #about_section .main-presentation {
     display: grid;
-    grid-template-columns: 50% 40%; /* Two rows of equal height */
+    grid-template-columns: 50% 40%;
     justify-content: space-between;
   }
-
-  // .left-presentation {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: center;
-  // }
 
   #about_section .right-presentation {
     display: flex;
@@ -54,47 +47,30 @@
   .left-presentation h2 {
     font-family: Montserrat;
     font-weight: 500;
-    font-style: Medium;
     font-size: 4.5rem;
     line-height: 100%;
-    letter-spacing: 0%;
-
   }
 
   .left-presentation h3 {
     font-family: Montserrat;
     font-weight: 400;
-    font-style: Regular;
     font-size: 2.5rem;
     line-height: 100%;
-    letter-spacing: 0%;
   }
 
   .left-presentation .paragraph p {
     font-family: Montserrat;
     font-weight: 400;
-    font-style: Regular;
     font-size: 1rem;
     line-height: 1.625rem;
-    letter-spacing: 0%;
     vertical-align: middle;
-
   }
 
   .left-presentation ul {
     display: flex;
     flex-wrap: wrap;
-    width: 92;
-    height: 52;
-    top: 459px;
-    left: 366px;
     border-width: 1px;
-    opacity: 1;
     border-radius: 1000px;
-    padding-top: 0.125rem;
-    padding-right: 0.75rem;
-    padding-bottom: 0.125rem;
-    // padding-left: 13px;
     gap: 10px;
   }
 
@@ -104,7 +80,6 @@
     background: #EDEDED;
     font-family: Montserrat;
     font-weight: 400;
-    font-style: Regular;
     font-size: 0.875rem;
     line-height: 1.625rem;
     letter-spacing: 3%;
@@ -115,15 +90,16 @@
 
   .secondary-presentation {
     margin-top: 2.5rem;
+
     .bottom-secondary-presentation {
       display: flex;
       justify-content: end;
-      a{
+
+      a {
         text-decoration: none;
         color: black;
         font-family: Montserrat;
         font-weight: 400;
-        font-style: Regular;
         font-size: 0.875rem;
         line-height: 1.625rem;
         letter-spacing: 9%;
@@ -140,8 +116,166 @@
   .top-secondary-presentation {
     display: flex;
     vertical-align: middle;
+
     p {
       margin-left: 2rem;
+    }
+  }
+
+  .mobile-projects-cta {
+    display: none;
+  }
+}
+
+@media (max-width: 842px) {
+  #about_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 44px);
+    margin: auto 0;
+    padding: 0 0 44px;
+    background: #F1F1F1;
+  }
+
+  #about_section .center-section {
+    width: 100%;
+    margin: auto;
+  }
+
+  #about_section .main-presentation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about_section .left-presentation {
+    display: contents;
+  }
+
+  #about_section .right-presentation {
+    order: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 16px 20px;
+  }
+
+  #about_section .right-presentation .photo {
+    width: 140px;
+    // height: 140px;
+    max-height: none;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .left-presentation h2 {
+    order: 1;
+    font-family: Montserrat;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 100%;
+    margin-top: 12px;
+  }
+
+  .left-presentation h3 {
+    order: 2;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    margin: 16px 0px;
+  }
+
+  .left-presentation .paragraph {
+    order: 3;
+    margin: 0 20px 20px;
+  }
+
+  .left-presentation .paragraph p {
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    vertical-align: middle;
+  }
+
+  .left-presentation .paragraph .hidden {
+    display: none;
+  }
+
+  .main-presentation ul {
+    order: 5;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 1000px;
+    padding: 2px 0;
+    gap: 10px;
+    justify-content: center;
+    margin: 0 16px;
+  }
+
+  .main-presentation li {
+    padding: 6px 20px;
+    border-radius: 48px;
+    background: #EDEDED;
+    font-family: Montserrat;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 26px;
+    letter-spacing: 3%;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #D9D9D9;
+  }
+
+  .left-presentation .mobile-projects-cta {
+    order: 6;
+  }
+
+  .secondary-presentation {
+    display: none;
+    margin: 20px auto;
+
+    .bottom-secondary-presentation {
+      display: flex;
+      justify-content: center;
+
+      a {
+        text-decoration: none;
+        color: black;
+        font-family: Montserrat;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: 9%;
+        text-align: center;
+        vertical-align: middle;
+        text-transform: uppercase;
+        width: 255px;
+        height: 35px;
+      }
+    }
+  }
+
+  .mobile-projects-cta {
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+
+    a {
+      color: black;
+      text-decoration: none;
+      font-family: Montserrat;
+      font-weight: 400;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    i {
+      margin-right: 6px;
     }
   }
 }

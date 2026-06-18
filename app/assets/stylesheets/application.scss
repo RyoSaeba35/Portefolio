@@ -11,3 +11,19 @@
 @import "components/index";
 @import "pages/index";
 
+@media (max-width: 842px) {
+  #projects_section,
+  #contact_section {
+    display: none;
+  }
+
+  #projects_section.screen-hidden,
+  #contact_section.screen-hidden,
+  #about_section.screen-hidden {
+    display: none;
+  }
+
+  #about_section {
+    display: block;
+  }
+}

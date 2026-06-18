@@ -1,0 +1,15 @@
+{
+  "name": "Pierre Libran - Portfolio",
+  "short_name": "PierreLibran",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F1F1F1",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/profile.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

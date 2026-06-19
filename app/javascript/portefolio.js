@@ -88,6 +88,7 @@ export function showScreen(screenName) {
   Object.entries(MOBILE_SCREENS).forEach(([sectionId, name]) => {
     const section = document.getElementById(sectionId);
     if (!section) return;
+    section.classList.remove("js-pre-hide");
     if (name === screenName) {
       section.classList.remove("screen-hidden");
       section.scrollTop = 0;

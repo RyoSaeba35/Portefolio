@@ -36,7 +36,7 @@
     - "Ruby on Rails"
     - "API"
     - "Android"
-  cover_image: KotobaCiphers_cover.png # à remplacer une fois l'image dispo, ex: "KotobaCiphers_1.1.png"
+  cover_image: "KotobaCiphers_cover.png"
   gallery:
     - "KotobaCiphers_1.jpeg"
     - "KotobaCiphers_2.jpeg"

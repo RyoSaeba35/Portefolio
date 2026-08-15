@@ -144,6 +144,7 @@
   color: "#7C3AED"
   description:
     - "Claude Usage Monitor est un outil développé en <strong>Python</strong> permettant de suivre et visualiser la consommation de l'API Claude d'Anthropic."
+    - "Il envoi aussi des notifications sur windows pour alerter l'utilisateur lorsque la consommation de tokens dépasse un certain seuil."
     - "Un projet utilitaire pensé pour garder un <strong>contrôle précis sur les tokens consommés et les coûts générés</strong> lors de l'utilisation de l'API."
   technologies:
     - "Python"

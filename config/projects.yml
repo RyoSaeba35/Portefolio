@@ -1,24 +1,40 @@
 - id: 1
-  title: "Crypto Analyser"
-  subtitle: "Site WEB"
-  link: "https://crypto-analyzer-production-d4d2.up.railway.app/"
-  link_label: "Crypto Analyser"
-  github: "https://github.com/RyoSaeba35/crypto-analyzer"
-  color: "#F2C94C"
+  title: "Vulcain VPN"
+  subtitle: null
+  link: "https://www.vulcainvpn.com/"
+  link_label: "Vulcain VPN"
+  github: null
+  color: "#3B9F22"
   description:
-    - "Crypto Analyser est une application web développée avec <strong>Next.js, TypeScript et React</strong>, permettant de suivre et d'analyser les cryptomonnaies en temps réel."
-    - "Un projet axé sur la <strong>performance et la clarté de l'affichage des données</strong>, pour aider les utilisateurs à filtrer rapidement les actifs qui les intéressent."
+    - "Vulcain VPN est un service VPN simple et efficace, basé sur Sing-Box et WireGuard, conçu pour une navigation sécurisée et anonyme. J'ai développé l'ensemble de la plateforme : système d'abonnement en ligne, API de génération et d'envoi automatisé des configurations de connexion, ainsi que la mise en place et l'administration du serveur. Les utilisateurs se connectent en quelques clics grâce à une application mobile développée avec Flutter."
+    - "Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous."
   technologies:
-    - "Next.js"
-    - "TypeScript"
-    - "React"
+    - "Ruby on Rails"
+    - "HTML"
+    - "CSS"
+    - "JavaScript"
+    - "PostgreSQL"
+    - "Figma"
+    - "Stripe"
+    - "Wasabi"
+    - "Heroku"
     - "Railway"
-  cover_image: "CryptoAnalyser_cover.png"
+    - "Ruby"
+    - "WireGuard"
+    - "Devise"
+    - "Sidekiq"
+    - "Redis"
+    - "Net::SSH, Net::SCP, Net::SFTP"
+  cover_image: "VulcainVPN_cover.jpeg"
   gallery:
-    - "CryptoAnalyser_1.png"
-    - "CryptoAnalyser_2.png"
-    - "CryptoAnalyser_3.png"
-    - "CryptoAnalyser_4.png"
+    - "VulcainVPN_1.2.jpeg"
+    - "VulcainVPN_1.3.jpeg"
+    - "VulcainVPN_1.4.jpeg"
+    - "VulcainVPN_1.6.jpeg"
+    - "VulcainVPN_1.7.jpeg"
+    - "VulcainVPN_9.jpeg"
+    - "VulcainVPN_10.jpeg"
+    - "VulcainVPN_11.jpeg"
 
 - id: 2
   title: "Kotoba Ciphers"
@@ -70,42 +86,26 @@
     - "TheLittleFirefly_3.8.jpeg"
 
 - id: 4
-  title: "Vulcain VPN"
-  subtitle: null
-  link: "https://www.vulcainvpn.com/"
-  link_label: "Vulcain VPN"
-  github: null
-  color: "#3B9F22"
+  title: "Crypto Analyser"
+  subtitle: "Site WEB"
+  link: "https://crypto-analyzer-production-d4d2.up.railway.app/"
+  link_label: "Crypto Analyser"
+  github: "https://github.com/RyoSaeba35/crypto-analyzer"
+  color: "#F2C94C"
   description:
-    - "Vulcain VPN est un service VPN simple et efficace, basé sur Sing-Box et WireGuard, conçu pour une navigation sécurisée et anonyme. J'ai développé l'ensemble de la plateforme : système d'abonnement en ligne, API de génération et d'envoi automatisé des configurations de connexion, ainsi que la mise en place et l'administration du serveur. Les utilisateurs se connectent en quelques clics grâce à une application mobile développée avec Flutter."
-    - "Un projet qui allie <strong>accessibilité, expérience utilisateur</strong>, et la volonté de rendre la protection de la vie privée facile pour tous."
+    - "Crypto Analyser est une application web développée avec <strong>Next.js, TypeScript et React</strong>, permettant de suivre et d'analyser les cryptomonnaies en temps réel."
+    - "Un projet axé sur la <strong>performance et la clarté de l'affichage des données</strong>, pour aider les utilisateurs à filtrer rapidement les actifs qui les intéressent."
   technologies:
-    - "Ruby on Rails"
-    - "HTML"
-    - "CSS"
-    - "JavaScript"
-    - "PostgreSQL"
-    - "Figma"
-    - "Stripe"
-    - "Wasabi"
-    - "Heroku"
+    - "Next.js"
+    - "TypeScript"
+    - "React"
     - "Railway"
-    - "Ruby"
-    - "WireGuard"
-    - "Devise"
-    - "Sidekiq"
-    - "Redis"
-    - "Net::SSH, Net::SCP, Net::SFTP"
-  cover_image: "VulcainVPN_cover.jpeg"
+  cover_image: "CryptoAnalyser_cover.png"
   gallery:
-    - "VulcainVPN_1.2.jpeg"
-    - "VulcainVPN_1.3.jpeg"
-    - "VulcainVPN_1.4.jpeg"
-    - "VulcainVPN_1.6.jpeg"
-    - "VulcainVPN_1.7.jpeg"
-    - "VulcainVPN_9.jpeg"
-    - "VulcainVPN_10.jpeg"
-    - "VulcainVPN_11.jpeg"
+    - "CryptoAnalyser_1.png"
+    - "CryptoAnalyser_2.png"
+    - "CryptoAnalyser_3.png"
+    - "CryptoAnalyser_4.png"
 
 - id: 5
   title: "Flashcard Wars"
@@ -134,3 +134,18 @@
     - "FlashcardWars_1.6.jpg"
     - "FlashcardWars_1.7.jpg"
     - "FlashcardWars_1.8.jpg"
+
+- id: 6
+  title: "Claude Usage Monitor"
+  subtitle: "Outil / Tool"
+  link: null
+  link_label: null
+  github: "https://github.com/RyoSaeba35/claude-usage-monitor/"
+  color: "#7C3AED"
+  description:
+    - "Claude Usage Monitor est un outil développé en <strong>Python</strong> permettant de suivre et visualiser la consommation de l'API Claude d'Anthropic."
+    - "Un projet utilitaire pensé pour garder un <strong>contrôle précis sur les tokens consommés et les coûts générés</strong> lors de l'utilisation de l'API."
+  technologies:
+    - "Python"
+  cover_image: "ClaudeUsageMonitor_cover.png"
+  gallery: []

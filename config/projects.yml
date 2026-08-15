@@ -148,5 +148,6 @@
     - "Un projet utilitaire pensé pour garder un <strong>contrôle précis sur les tokens consommés et les coûts générés</strong> lors de l'utilisation de l'API."
   technologies:
     - "Python"
+    - "PySide6"
   cover_image: "ClaudeUsageMonitor_cover.png"
   gallery: []

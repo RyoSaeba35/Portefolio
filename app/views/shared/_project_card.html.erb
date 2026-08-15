@@ -77,8 +77,8 @@
     </details>
 
     <details>
-      <% if project.gallery.present? %>
-        <summary><strong><%= project.gallery_label %></strong></summary>
+        <summary><strong><% if project.gallery.present? %><%= project.gallery_label %><% end %>
+        </strong></summary>
         <% if project.gallery.present? %>
           <div class="image-gallery">
             <div class="main-image">
@@ -101,7 +101,6 @@
         <% else %>
           <p class="gallery-empty">Galerie à venir.</p>
         <% end %>
-      <% end %>
     </details>
   </div>
 </div>

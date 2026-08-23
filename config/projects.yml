@@ -107,33 +107,33 @@
     - "CryptoAnalyser_3.png"
     - "CryptoAnalyser_4.png"
 
-- id: 5
-  title: "Flashcard Wars"
-  subtitle: Jeu Mobile
-  link: null
-  link_label: null
-  github: null
-  color: "#0E98A9"
-  completed_stages: ["Recherche", "Wireframing", "Development", "Testing"]
-  gallery_label: "Gallery"
-  description:
-    - "Flash Card Wars est <strong>une application ludique</strong> créée pour les étudiants du Wagon afin de mémoriser les leçons via des flashcards interactives et des défis entre camarades."
-    - "J’ai travaillé sur le <strong>back-end en Ruby on Rails</strong> et <strong>l’intégration front-end,</strong> ainsi que sur <strong>la logique de jeu.</strong>"
-  technologies:
-    - "Ruby on Rails"
-    - "HTML"
-    - "CSS"
-    - "JavaScript"
-    - "PostgreSQL"
-    - "Figma"
-  cover_image: "FlashcardWars_1.1.png"
-  gallery:
-    - "FlashcardWars_1.3.jpg"
-    - "FlashcardWars_1.4.jpg"
-    - "FlashcardWars_1.5.jpg"
-    - "FlashcardWars_1.6.jpg"
-    - "FlashcardWars_1.7.jpg"
-    - "FlashcardWars_1.8.jpg"
+# - id: 5
+#   title: "Flashcard Wars"
+#   subtitle: Jeu Mobile
+#   link: null
+#   link_label: null
+#   github: null
+#   color: "#0E98A9"
+#   completed_stages: ["Recherche", "Wireframing", "Development", "Testing"]
+#   gallery_label: "Gallery"
+#   description:
+#     - "Flash Card Wars est <strong>une application ludique</strong> créée pour les étudiants du Wagon afin de mémoriser les leçons via des flashcards interactives et des défis entre camarades."
+#     - "J’ai travaillé sur le <strong>back-end en Ruby on Rails</strong> et <strong>l’intégration front-end,</strong> ainsi que sur <strong>la logique de jeu.</strong>"
+#   technologies:
+#     - "Ruby on Rails"
+#     - "HTML"
+#     - "CSS"
+#     - "JavaScript"
+#     - "PostgreSQL"
+#     - "Figma"
+#   cover_image: "FlashcardWars_1.1.png"
+#   gallery:
+#     - "FlashcardWars_1.3.jpg"
+#     - "FlashcardWars_1.4.jpg"
+#     - "FlashcardWars_1.5.jpg"
+#     - "FlashcardWars_1.6.jpg"
+#     - "FlashcardWars_1.7.jpg"
+#     - "FlashcardWars_1.8.jpg"
 
 - id: 6
   title: "Claude Usage Monitor"
